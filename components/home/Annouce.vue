@@ -45,7 +45,7 @@
                 <div class="tp-button-demo text-end">
                     <NuxtLink
                         to="/annouce"
-                        class="btn tp-btn-border-brown"
+                        class="tp-btn-border-brown"
                         >ข่าวประกาศทั้งหมด</NuxtLink
                     >
                 </div>

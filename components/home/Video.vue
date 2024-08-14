@@ -83,7 +83,7 @@
 </template>
 
 <script setup>
-import VideoModal from "~~/components/common/modals/VideoModal.vue";
+import VideoModal from "~/components/common/modals/VideoModal.vue";
 
 const runtimeConfig = useRuntimeConfig();
 
@@ -114,7 +114,7 @@ items.value.shift();
 
 const handleVideoPopup = (it) => {
     videoUrl.value = it.video_url;
-    //   video_modal.value.playVideo();
+    video_modal.value.playVideo();
 };
 </script>
 
