@@ -352,6 +352,13 @@
                             </li>
                             <li>
                                 <nuxt-link
+                                    to="/admin/video"
+                                    @click="closeOffcanvas"
+                                    >- VIDEO</nuxt-link
+                                >
+                            </li>
+                            <li>
+                                <nuxt-link
                                     to="/admin/team"
                                     @click="closeOffcanvas"
                                     >- บุคลากร</nuxt-link

@@ -126,6 +126,14 @@
                                 <hr />
                                 <li>
                                     <nuxt-link
+                                        to="/admin/video"
+                                        @click="closeOffcanvas"
+                                        >- VIDEO</nuxt-link
+                                    >
+                                </li>
+                                <hr />
+                                <li>
+                                    <nuxt-link
                                         to="/admin/team"
                                         @click="closeOffcanvas"
                                         >- บุคลากร</nuxt-link
@@ -262,6 +270,14 @@
                                     to="/admin/banner"
                                     @click="closeOffcanvas"
                                     >- Banner</nuxt-link
+                                >
+                            </li>
+                            <hr />
+                            <li>
+                                <nuxt-link
+                                    to="/admin/video"
+                                    @click="closeOffcanvas"
+                                    >- VIDEO</nuxt-link
                                 >
                             </li>
                             <hr />
