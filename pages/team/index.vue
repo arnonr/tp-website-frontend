@@ -166,7 +166,7 @@
                                         </div>
                                         <!--  -->
                                         <div
-                                            class="row mt-20"
+                                            class="row"
                                             v-if="
                                                 dp.teamItems.length != 0 &&
                                                 dp.id == 1
@@ -178,7 +178,10 @@
                                                     class="text-center row justify-content-md-center"
                                                 >
                                                     <div
-                                                        class="team__item-10 col-lg-3 mt-20"
+                                                        class="team__item-10 col-lg-3"
+                                                        style="
+                                                            margin-top: 20px !important;
+                                                        "
                                                     >
                                                         <div
                                                             class="team__thumb-10 p-relative m-img"
@@ -288,7 +291,12 @@
                                                 </div>
                                             </div>
                                             <!-- รอง -->
-                                            <div class="col-md-12">
+                                            <div
+                                                class="col-md-12"
+                                                style="
+                                                    margin-top: 20px !important;
+                                                "
+                                            >
                                                 <div
                                                     class="row justify-content-md-center"
                                                 >
@@ -622,7 +630,12 @@
                                                 </div>
                                             </div>
                                             <!-- หัวหน้า สำนักงาน -->
-                                            <div class="col-md-12">
+                                            <div
+                                                class="col-md-12"
+                                                style="
+                                                    margin-top: 20px !important;
+                                                "
+                                            >
                                                 <div
                                                     class="text-center row justify-content-md-center"
                                                 >
