@@ -16,7 +16,7 @@ export default {
                     link: "#",
                     submenus: [
                         {
-                            title: "เทคโนโลยีบัณฑิต เทคโนโลยียานยนต์สมัยใหม่และระบบอัติโนมัติ (NAAT)",
+                            title: "เทคโนโลยีบัณฑิต เทคโนโลยียานยนต์สมัยใหม่และระบบอัตโนมัติ (NAAT)",
                             link: "/course/1",
                         },
                     ],
@@ -28,14 +28,20 @@ export default {
                     link: "#",
                     submenus: [
                         { title: "ประวัติความเป็นมา CWIE", link: "/cwie/1" },
-                        { title: "ข้อบังคับ ประกาศ ระเบียบ CWIE", link: "/cwie/2" },
+                        {
+                            title: "ข้อบังคับ ประกาศ ระเบียบ CWIE",
+                            link: "/cwie/2",
+                        },
                         { title: "ระบบสารสนเทศ CWIE", link: "/cwie/3" },
                         { title: "คู่มือ CWIE", link: "/cwie/4" },
                         { title: "เอกสารดาวน์โหลด", link: "/cwie/5" },
                         { title: "ประโยชน์ของ CWIE", link: "/cwie/6" },
                         { title: "รางวัล CWIE ดีเด่น", link: "/cwie/7" },
-                        { title: "ปฏิทิน CWIE มจพ.",link: "/cwie/8" },
-                        { title: "เครือข่าย CWIE ภาคกลางตอนบน",link: "/cwie/9" },
+                        { title: "ปฏิทิน CWIE มจพ.", link: "/cwie/8" },
+                        {
+                            title: "เครือข่าย CWIE ภาคกลางตอนบน",
+                            link: "/cwie/9",
+                        },
                         {
                             title: "ประกวดผลงาน CWIE",
                             link: "https://forms.gle/XzuhcaMrBmNdYfrt8",
@@ -44,23 +50,19 @@ export default {
                 },
                 {
                     id: 4,
-                    hasDropdown: false,
+                    hasDropdown: true,
                     title: "งานบริการวิชาการ",
-                    link: "/serve",
-                    // submenus: [
-                    //     {
-                    //         title: "อุทยานเทคโนโลยี มจพ.กรุงเทพฯ",
-                    //         link: "/about/10",
-                    //     },
-                    //     {
-                    //         title: "อุทยานเทคโนโลยี มจพ.ปราจีนบุรี",
-                    //         link: "/about/11",
-                    //     },
-                    //     {
-                    //         title: "อุทยานเทคโนโลยี มจพ.ระยอง",
-                    //         link: "/about/12",
-                    //     },
-                    // ],
+                    link: "#",
+                    submenus: [
+                        {
+                            title: "หน่วยงาน",
+                            link: "/department",
+                        },
+                        {
+                            title: "งานบริการวิชาการทั้งหมด",
+                            link: "/serve",
+                        },
+                    ],
                 },
                 {
                     id: 4,
@@ -92,8 +94,8 @@ export default {
                         { title: "โครงสร้างองค์กร", link: "/about/4" },
                         { title: "โครงสร้างบริหาร", link: "/about/5" },
                         { title: "บุคลากร", link: "/team" },
-                        { title: "ระบบสารสนเทศภายใน", link: "/about/7" },
                         { title: "แบบฟอร์มสำหรับบุคลากร", link: "/about/6" },
+                        { title: "ระบบสารสนเทศภายใน", link: "/about/7" },
                     ],
                 },
                 {

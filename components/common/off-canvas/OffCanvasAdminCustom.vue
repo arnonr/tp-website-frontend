@@ -71,6 +71,38 @@
                                     >
                                 </li>
                                 <hr />
+                                <li>
+                                    <nuxt-link
+                                        to="/admin/article"
+                                        @click="closeOffcanvas"
+                                        >- บทความ</nuxt-link
+                                    >
+                                </li>
+                                <hr />
+                                <li>
+                                    <nuxt-link
+                                        to="/admin/course"
+                                        @click="closeOffcanvas"
+                                        >- หลักสูตร</nuxt-link
+                                    >
+                                </li>
+                                <hr />
+                                <li>
+                                    <nuxt-link
+                                        to="/admin/cwie"
+                                        @click="closeOffcanvas"
+                                        >- CWIE</nuxt-link
+                                    >
+                                </li>
+                                <hr />
+                                <li>
+                                    <nuxt-link
+                                        to="/admin/intellectual"
+                                        @click="closeOffcanvas"
+                                        >- ทรัพย์สินทางปัญญา</nuxt-link
+                                    >
+                                </li>
+                                <hr />
                             </ul>
 
                             <ul
@@ -94,6 +126,14 @@
                                 <hr />
                                 <li>
                                     <nuxt-link
+                                        to="/admin/team"
+                                        @click="closeOffcanvas"
+                                        >- บุคลากร</nuxt-link
+                                    >
+                                </li>
+                                <hr />
+                                <li>
+                                    <nuxt-link
                                         href="/admin/news-type"
                                         @click="closeOffcanvas"
                                         >- ประเภทข่าว</nuxt-link
@@ -102,7 +142,15 @@
                                 <hr />
                                 <li>
                                     <nuxt-link
-                                        href="/admin/contact-us"
+                                        href="/admin/about"
+                                        @click="closeOffcanvas"
+                                        >- เกี่ยวกับเรา</nuxt-link
+                                    >
+                                </li>
+                                <hr />
+                                <li>
+                                    <nuxt-link
+                                        href="/admin/contact"
                                         @click="closeOffcanvas"
                                         >- ติดต่อสอบถาม</nuxt-link
                                     >
@@ -166,6 +214,38 @@
                                 >
                             </li>
                             <hr />
+                            <li>
+                                <nuxt-link
+                                    to="/admin/article"
+                                    @click="closeOffcanvas"
+                                    >- บทความ</nuxt-link
+                                >
+                            </li>
+                            <hr />
+                            <li>
+                                <nuxt-link
+                                    to="/admin/course"
+                                    @click="closeOffcanvas"
+                                    >- หลักสูตร</nuxt-link
+                                >
+                            </li>
+                            <hr />
+                            <li>
+                                <nuxt-link
+                                    to="/admin/cwie"
+                                    @click="closeOffcanvas"
+                                    >- CWIE</nuxt-link
+                                >
+                            </li>
+                            <hr />
+                            <li>
+                                <nuxt-link
+                                    to="/admin/intellectual"
+                                    @click="closeOffcanvas"
+                                    >- ทรัพย์สินทางปัญญา</nuxt-link
+                                >
+                            </li>
+                            <hr />
                         </ul>
 
                         <ul
@@ -187,6 +267,14 @@
                             <hr />
                             <li>
                                 <nuxt-link
+                                    to="/admin/team"
+                                    @click="closeOffcanvas"
+                                    >- บุคลากร</nuxt-link
+                                >
+                            </li>
+                            <hr />
+                            <li>
+                                <nuxt-link
                                     href="/admin/news-type"
                                     @click="closeOffcanvas"
                                     >- ประเภทข่าว</nuxt-link
@@ -195,7 +283,15 @@
                             <hr />
                             <li>
                                 <nuxt-link
-                                    href="/admin/contact-us"
+                                    href="/admin/about"
+                                    @click="closeOffcanvas"
+                                    >- เกี่ยวกับเรา</nuxt-link
+                                >
+                            </li>
+                            <hr />
+                            <li>
+                                <nuxt-link
+                                    href="/admin/contact"
                                     @click="closeOffcanvas"
                                     >- ติดต่อสอบถาม</nuxt-link
                                 >

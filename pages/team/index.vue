@@ -67,7 +67,7 @@
                   data-bs-parent="#general_accordion_p"
                 >
                   <div class="accordion-body">
-                    <div class="row mt-20" v-if="dp.id != 1">
+                    <div class="row" v-if="dp.id != 1">
                       <div
                         v-for="(it, i) in dp.teamItems"
                         :key="i"

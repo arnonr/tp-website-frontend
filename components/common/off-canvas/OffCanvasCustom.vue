@@ -43,27 +43,213 @@
                                 </li>
                                 <hr />
                                 <li>
-                                    <nuxt-link
-                                        to="/serve"
-                                        @click="closeOffcanvas"
-                                        >- งานบริการวิชาการ</nuxt-link
-                                    >
+                                    <nuxt-link>- หลักสูตร</nuxt-link>
+                                    <ul style="text-indent: 2em">
+                                        <li>
+                                            <nuxt-link
+                                                to="/course/1"
+                                                @click="closeOffcanvas"
+                                                >- เทคโนโลยีบัณฑิต
+                                                เทคโนโลยียานยนต์สมัยใหม่และระบบอัตโนมัติ
+                                                (NAAT)</nuxt-link
+                                            >
+                                        </li>
+                                    </ul>
+                                </li>
+                                <hr />
+                                <li>
+                                    <nuxt-link>- CWIE</nuxt-link>
+                                    <ul style="text-indent: 2em">
+                                        <li class="mt-2">
+                                            <nuxt-link
+                                                to="/cwie/1"
+                                                @click="closeOffcanvas"
+                                                >- ประวัติความเป็นมา
+                                                CWIE</nuxt-link
+                                            >
+                                        </li>
+                                        <li class="mt-2">
+                                            <nuxt-link
+                                                to="/cwie/2"
+                                                @click="closeOffcanvas"
+                                                >- ข้อบังคับ ประกาศ ระเบียบ
+                                                CWIE</nuxt-link
+                                            >
+                                        </li>
+                                        <li class="mt-2">
+                                            <nuxt-link
+                                                to="/cwie/3"
+                                                @click="closeOffcanvas"
+                                                >- ระบบสารสนเทศ CWIE</nuxt-link
+                                            >
+                                        </li>
+                                        <li class="mt-2">
+                                            <nuxt-link
+                                                to="/cwie/4"
+                                                @click="closeOffcanvas"
+                                                >- คู่มือ CWIE</nuxt-link
+                                            >
+                                        </li>
+                                        <li class="mt-2">
+                                            <nuxt-link
+                                                to="/cwie/5"
+                                                @click="closeOffcanvas"
+                                                >- เอกสารดาวน์โหลด</nuxt-link
+                                            >
+                                        </li>
+                                        <li class="mt-2">
+                                            <nuxt-link
+                                                to="/cwie/6"
+                                                @click="closeOffcanvas"
+                                                >- ประโยชน์ของ CWIE</nuxt-link
+                                            >
+                                        </li>
+                                        <li class="mt-2">
+                                            <nuxt-link
+                                                to="/cwie/7"
+                                                @click="closeOffcanvas"
+                                                >- รางวัล CWIE ดีเด่น</nuxt-link
+                                            >
+                                        </li>
+                                        <li class="mt-2">
+                                            <nuxt-link
+                                                to="/cwie/8"
+                                                @click="closeOffcanvas"
+                                                >- ปฏิทิน CWIE มจพ.</nuxt-link
+                                            >
+                                        </li>
+                                        <li class="mt-2">
+                                            <nuxt-link
+                                                to="/cwie/9"
+                                                @click="closeOffcanvas"
+                                                >- เครือข่าย CWIE
+                                                ภาคกลางตอนบน</nuxt-link
+                                            >
+                                        </li>
+                                        <li class="mt-2">
+                                            <nuxt-link
+                                                to="https://forms.gle/XzuhcaMrBmNdYfrt8"
+                                                @click="closeOffcanvas"
+                                                >- ประกวดผลงาน CWIE</nuxt-link
+                                            >
+                                        </li>
+                                    </ul>
+                                </li>
+                                <hr />
+                                <li>
+                                    <nuxt-link>- งานบริการวิชาการ</nuxt-link>
+                                    <ul style="text-indent: 2em">
+                                        <li class="mt-2">
+                                            <nuxt-link
+                                                to="/department"
+                                                @click="closeOffcanvas"
+                                                >- หน่วยงาน</nuxt-link
+                                            >
+                                        </li>
+                                        <li class="mt-2">
+                                            <nuxt-link
+                                                to="/serve"
+                                                @click="closeOffcanvas"
+                                                >-
+                                                งานบริการวิชาการทั้งหมด</nuxt-link
+                                            >
+                                        </li>
+                                    </ul>
                                 </li>
                                 <hr />
                                 <li>
                                     <nuxt-link
-                                        to="/news"
-                                        @click="closeOffcanvas"
-                                        >- ข่าวและประกาศ</nuxt-link
+                                        >- งานทรัพย์สินทางปัญญา</nuxt-link
                                     >
+                                    <ul style="text-indent: 2em">
+                                        <li class="mt-2">
+                                            <nuxt-link
+                                                to="/intellectual/1"
+                                                @click="closeOffcanvas"
+                                                >-
+                                                งานทรัพย์สินทางปัญญา</nuxt-link
+                                            >
+                                        </li>
+                                        <li class="mt-2">
+                                            <nuxt-link
+                                                to="/intellectual/2"
+                                                @click="closeOffcanvas"
+                                                >- เอกสารดาวน์โหลด</nuxt-link
+                                            >
+                                        </li>
+                                    </ul>
                                 </li>
-                                <hr />
+
+                                <!-- <hr />
                                 <li>
                                     <nuxt-link
                                         to="/department"
                                         @click="closeOffcanvas"
                                         >- หน่วยงาน</nuxt-link
                                     >
+                                </li> -->
+                                <hr />
+                                <li>
+                                    <nuxt-link>- เกี่ยวกับเรา</nuxt-link>
+                                    <ul style="text-indent: 2em">
+                                        <li class="mt-2">
+                                            <nuxt-link
+                                                to="/about/1"
+                                                @click="closeOffcanvas"
+                                                >- ความเป็นมา</nuxt-link
+                                            >
+                                        </li>
+                                        <li class="mt-2">
+                                            <nuxt-link
+                                                to="/about/2"
+                                                @click="closeOffcanvas"
+                                                >- วิสัยทัศน์/พันธกิจ</nuxt-link
+                                            >
+                                        </li>
+                                        <li class="mt-2">
+                                            <nuxt-link
+                                                to="/about/3"
+                                                @click="closeOffcanvas"
+                                                >- สัญลักษณ์</nuxt-link
+                                            >
+                                        </li>
+                                        <li class="mt-2">
+                                            <nuxt-link
+                                                to="/about/4"
+                                                @click="closeOffcanvas"
+                                                >- โครงสร้างองค์กร</nuxt-link
+                                            >
+                                        </li>
+                                        <li class="mt-2">
+                                            <nuxt-link
+                                                to="/about/5"
+                                                @click="closeOffcanvas"
+                                                >- โครงสร้างบริหาร</nuxt-link
+                                            >
+                                        </li>
+                                        <li class="mt-2">
+                                            <nuxt-link
+                                                to="/about/6"
+                                                @click="closeOffcanvas"
+                                                >- บุคลากร</nuxt-link
+                                            >
+                                        </li>
+                                        <li class="mt-2">
+                                            <nuxt-link
+                                                to="/about/6"
+                                                @click="closeOffcanvas"
+                                                >-
+                                                แบบฟอร์มสำหรับบุคลากร</nuxt-link
+                                            >
+                                        </li>
+                                        <li class="mt-2">
+                                            <nuxt-link
+                                                to="/about/7"
+                                                @click="closeOffcanvas"
+                                                >- ระบบสารสนเทศภายใน</nuxt-link
+                                            >
+                                        </li>
+                                    </ul>
                                 </li>
                                 <hr />
                                 <li>
@@ -99,6 +285,7 @@
                                     >- ข้อมูลหน่วยงาน</nuxt-link
                                 >
                             </li>
+                            <hr />
                             <li>
                                 <nuxt-link
                                     to="/admin/serve"
@@ -106,11 +293,44 @@
                                     >- ข้อมูลงานบริการวิชาการ</nuxt-link
                                 >
                             </li>
+                            <hr />
                             <li>
                                 <nuxt-link
                                     to="/admin/news"
                                     @click="closeOffcanvas"
                                     >- ข้อมูลข่าว</nuxt-link
+                                >
+                            </li>
+                            <hr />
+                            <li>
+                                <nuxt-link
+                                    to="/admin/article"
+                                    @click="closeOffcanvas"
+                                    >- บทความ</nuxt-link
+                                >
+                            </li>
+                            <hr />
+                            <li>
+                                <nuxt-link
+                                    to="/admin/course"
+                                    @click="closeOffcanvas"
+                                    >- หลักสูตร</nuxt-link
+                                >
+                            </li>
+                            <hr />
+                            <li>
+                                <nuxt-link
+                                    to="/admin/cwie"
+                                    @click="closeOffcanvas"
+                                    >- CWIE</nuxt-link
+                                >
+                            </li>
+                            <hr />
+                            <li>
+                                <nuxt-link
+                                    to="/admin/intellectual"
+                                    @click="closeOffcanvas"
+                                    >- ทรัพย์สินทางปัญญา</nuxt-link
                                 >
                             </li>
                             <hr />
@@ -132,6 +352,14 @@
                             </li>
                             <li>
                                 <nuxt-link
+                                    to="/admin/team"
+                                    @click="closeOffcanvas"
+                                    >- บุคลากร</nuxt-link
+                                >
+                            </li>
+
+                            <li>
+                                <nuxt-link
                                     href="/admin/news-type"
                                     @click="closeOffcanvas"
                                     >- ประเภทข่าว</nuxt-link
@@ -139,7 +367,14 @@
                             </li>
                             <li>
                                 <nuxt-link
-                                    href="/admin/contact-us"
+                                    href="/admin/about"
+                                    @click="closeOffcanvas"
+                                    >- เกี่ยวกับเรา</nuxt-link
+                                >
+                            </li>
+                            <li>
+                                <nuxt-link
+                                    href="/admin/contact"
                                     @click="closeOffcanvas"
                                     >- ติดต่อสอบถาม</nuxt-link
                                 >

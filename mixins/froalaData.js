@@ -4,7 +4,7 @@ export default {
             froala_config: function () {
                 const runtimeConfig = useRuntimeConfig();
                 return {
-                    height: 300,
+                    height: 600,
                     // inlineMode: false,
                     pastePlain: false,
                     pasteDeniedTags: [],
