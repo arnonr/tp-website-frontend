@@ -1,0 +1,11 @@
+แก้ title หน้า index ที่ pages/index.vue
+แก้ favicon โดยการเปลี่ยนไฟล์ public/favicon.ico
+
+
+แก้ LOGO ที่ header/HeaderCustom.vue
+เปลี่ยนภาษาใช้ widget Google ที่ /components/translate/GoogleTranslteWidget
+เพิ่ม ลบ เมนู ที่ /mixins/menuData.js
+
+แก้ font-family font-scale(bold) font-size ที่ /assets/scss/utils/_typography.scss
+
+layout เมนู mobile อยู่ที่  /components/common/off-canvas/OffCanvasTwo

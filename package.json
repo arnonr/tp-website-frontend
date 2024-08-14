@@ -1,0 +1,43 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "nuxt": "^3.12.2"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.4.6",
+    "@uppy/core": "^4.1.0",
+    "@uppy/dashboard": "^4.0.2",
+    "@uppy/drag-drop": "^4.0.1",
+    "@uppy/progress-bar": "^4.0.0",
+    "@uppy/status-bar": "^4.0.1",
+    "@uppy/url": "^4.0.0",
+    "@uppy/vue": "^2.0.0",
+    "@uppy/xhr-upload": "^4.0.2",
+    "@vuepic/vue-datepicker": "^9.0.1",
+    "@wiris/mathtype-froala3": "^7.31.1",
+    "@yeger/vue-masonry-wall": "^3.4.3",
+    "bootstrap": "^5.2.3",
+    "dayjs": "^1.11.12",
+    "froala-editor": "^4.2.1",
+    "nuxt-vue-select": "^0.1.4",
+    "parallax-js": "^3.1.0",
+    "pinia": "^2.0.30",
+    "sal.js": "^0.8.5",
+    "sass": "^1.57.1",
+    "sweetalert2": "^11.12.3",
+    "swiper": "^9.0.2",
+    "toastify-js": "^1.12.0",
+    "uppy": "^4.1.0",
+    "vue-easy-lightbox": "^1.11.0",
+    "vue-froala-wysiwyg": "^4.2.1",
+    "vue-select": "^4.0.0-beta.6",
+    "vue3-carousel": "^0.2.9"
+  }
+}

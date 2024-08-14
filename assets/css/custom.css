@@ -1,0 +1,365 @@
+body {
+    font-family: 'Sarabun';
+}
+
+dl,
+ol,
+ul {
+    margin-bottom: 0rem;
+}
+
+.w-70-percent {
+    width: 70%
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.text-color-primary {
+    color: #f60
+}
+
+.backround-primary {
+    background-color: #f60
+}
+
+.text-color-secondary {
+    color: #000;
+}
+
+.mr-0-5 {
+    margin-right: 0.5em;
+}
+
+.bg-theme-primary {
+    background-color: var(--tp-theme-1);
+}
+
+.hamburger-btn-primary span {
+    background-color: var(--tp-theme-1);
+}
+
+.header__sticky.header-sticky.header__style-4 .hamburger-btn span {
+    background-color: var(--tp-theme-1);
+}
+
+.v-select-no-border {
+    border: 0px;
+    margin-top: 6px;
+}
+
+.form-control:focus {
+    border: var(--vs-border-width) var(--vs-border-style) var(--vs-border-color);
+    outline: 0;
+    box-shadow: none;
+}
+
+.main-menu-4 ul li:hover>a::before {
+    width: 0%;
+}
+
+.main-menu-4 ul li .submenu li:hover>a {
+    color: var(--tp-theme-1);
+
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+input[type=number],
+input[type=password],
+textarea {
+    background-color: #FFFFFF;
+    height: 2.2em;
+    line-height: 2.2em;
+    margin-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: var(--vs-border-width) var(--vs-border-style) var(--vs-border-color);
+}
+
+
+.section-bg-primary {
+    background-color: #f60;
+    padding: 0.7em;
+    border-radius: 0.3em;
+}
+
+.blog__list-item {
+    border: dotted;
+    border-width: 0.1em;
+    border-color: #79bf6e
+}
+
+.admin-btn {
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    background: var(--tp-theme-1);
+    box-shadow: 0px 8px 16px rgba(3, 4, 28, 0.3);
+    color: var(--tp-common-white);
+    border-radius: 50%;
+    transition: all 0.2s ease-out 0s;
+}
+
+
+.admin-wrapper {
+    position: fixed;
+    right: 20px;
+    bottom: 0;
+    height: 250px;
+    display: block;
+    width: 44px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 99;
+    bottom: 50px;
+    /* position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 250px;
+    display: block;
+    width: 44px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 99; */
+}
+
+.label-required::before {
+    content: "* ";
+    color: red;
+    /* กำหนดสีของเครื่องหมาย * เป็นสีแดง */
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+
+.fr-wrapper a[href*="froala.com/wysiwyg-editor"] {
+    display: none !important;
+}
+
+
+@media only screen and (min-width: 1025px) {
+    .w-img-news[data-v-f089d84d] {
+        max-height: 200px !important;
+        min-height: 200px !important;
+    }
+}
+
+div.skin-dark {
+
+    .section-bg-primary {
+        color: #000
+    }
+
+    .table-admin {
+        color: #a9acbd;
+    }
+
+    a {
+        color: #a9acbd
+    }
+
+    a:hover {
+        color: #f60
+    }
+
+    .table-striped>tbody>tr:nth-of-type(odd)>* {
+        color: #a9acbd
+    }
+
+    .header__padding-4 {
+        background-color: #252a3d;
+    }
+
+    .header-sticky {
+        background-color: var(--tp-theme-1);
+    }
+
+
+
+
+
+    & main {
+        background-color: #252a3d;
+    }
+
+    /* #191c2a */
+
+    .bg-grey[data-v-1f73f8dc] {
+        background-color: #191c2a;
+    }
+
+    .bg-grey {
+        background-color: #191c2a;
+    }
+
+    .text-color-primary {
+        color: #f60
+    }
+
+    .text-color-secondary {
+        color: #a9acbd;
+    }
+
+    & h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: #a9acbd;
+    }
+
+    .footer__area {
+        background-color: #191c2a;
+    }
+
+    .footer__style-3 .footer__widget p {
+        color: #888;
+        line-height: 1.5;
+    }
+
+    .footer__style-3 .footer__copyright-5 p[data-v-b54456f8] {
+        color: #191c2a;
+    }
+
+    .tp-btn-border-brown {
+        color: #a9acbd;
+    }
+
+    .header__lang-selected-lang[data-v-124314bb] {
+        color: #a9acbd;
+    }
+
+    .header__info-wrapper-4 {
+        color: #a9acbd;
+    }
+
+    .blog__content-10 {
+        background-color: #252a3d;
+    }
+
+    .blog__grid-item .blog__title-10 {
+        color: #a9acbd;
+    }
+
+    .blog__list-item {
+        background-color: #252a3d;
+        border-bottom: solid;
+        /* border-radius: 0.5em; */
+    }
+
+
+    .white-bg {
+        background-color: #252a3d;
+    }
+
+    .blog__title-10 {
+        color: #a9acbd;
+    }
+
+    .v-select {
+        background-color: #252a3d;
+        border-radius: 0px;
+    }
+
+    .vs__dropdown-toggle {
+        background-color: #252a3d;
+        border: solid 1px #a9acbd;
+    }
+
+    .vs__selected {
+        color: #a9acbd !important;
+    }
+
+    & input.form-control {
+        background-color: #252a3d;
+        border: solid 1px #a9acbd;
+        color: #a9acbd;
+    }
+
+    .postbox__details-content-wrapper {
+        color: #a9acbd;
+    }
+
+    .grey-bg-4 {
+        background-color: #191c2a;
+    }
+
+    .breadcrumb-item-1 {
+
+        color: #6B6B7B;
+    }
+
+    .postbox__category a {
+        color: #555;
+    }
+
+    .breadcrumb__list span {
+        color: #6B6B7B;
+    }
+
+    .postbox__main-wrapper p {
+        color: #a9acbd;
+    }
+
+    .btn-custom-light {
+        color: #a9acbd;
+    }
+
+
+    .blog__content-10-top {
+        color: #a9acbd;
+    }
+}
+
+
+
+.text-custom-primary {
+    color: #f60
+}
+
+.btn-primary {
+    background-color: #f60
+        /* color:#ffcb05     */
+}
+
+.btn-primary {
+    background-color: #f60;
+    border-color: #f60
+}
+
+.btn-primary:hover {
+    background-color: #e65c00;
+    border-color: #e65c00;
+}
+
+.tp-btn-border-brown {
+    border-radius: 2em;
+}
+
+.tp-btn-border-brown:hover {
+    color: var(--tp-common-white);
+    background-color: var(--tp-theme-1);
+    border-color: var(--tp-theme-1);
+}
+
+.main-menu ul li {
+    margin-right: 12px;
+}
+
+.header__sticky.header-sticky .main-menu-4 ul li:hover>a {
+    color: var(--tp-theme-1);
+}
+
+.main-menu-4 ul li.has-dropdown a[data-v-41dc8907]::after {
+    color: var(--tp-common-dark) !important;
+}
+
