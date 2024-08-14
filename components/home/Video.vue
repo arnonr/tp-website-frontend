@@ -114,7 +114,10 @@ items.value.shift();
 
 const handleVideoPopup = (it) => {
     videoUrl.value = it.video_url;
-    video_modal.value.playVideo();
+
+    setTimeout(() => {
+        video_modal.value.playVideo();
+    }, 1000);
 };
 </script>
 
