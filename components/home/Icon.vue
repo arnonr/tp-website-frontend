@@ -31,26 +31,32 @@ const props = defineProps({
 });
 
 const icons = ref([
-  {
+{
     id: 1,
+    name: "Booking",
+    icon_file: "/images/iconwebtechnopark/icon_booking.png",
+    url: "https://technopark.kmutnb.ac.th/booking/",
+  },
+  {
+    id: 2,
     name: "Sustainable",
     icon_file: "/images/iconwebtechnopark/icon_green.png",
     url: "/article/1",
   },
   {
-    id: 2,
+    id: 3,
     name: "Knowledge Sharing",
     icon_file: "/images/iconwebtechnopark/icon_km.png",
     url: "/article/2",
   },
   {
-    id: 3,
+    id: 4,
     name: "Co-operation",
     icon_file: "/images/iconwebtechnopark/icon_mou.png",
     url: "/article/3",
   },
   {
-    id: 4,
+    id: 5,
     name: "Award & Standard Certificates",
     icon_file: "/images/iconwebtechnopark/icon_standard.png",
     url: "/article/4",

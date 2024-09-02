@@ -51,7 +51,7 @@
                                                 @click="closeOffcanvas"
                                                 >- เทคโนโลยีบัณฑิต
                                                 เทคโนโลยียานยนต์สมัยใหม่และระบบอัตโนมัติ
-                                                (NAAT)</nuxt-link
+                                                (MATA)</nuxt-link
                                             >
                                         </li>
                                     </ul>
