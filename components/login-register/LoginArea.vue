@@ -12,11 +12,11 @@
                                     alt="shape"
                                     style="width: 60%"
                                 />
-                                <img
+                                <!-- <img
                                     class="offcanvas__shape-1"
                                     src="~/assets/img/bg/bg-login.jpeg"
                                     alt="shape"
-                                />
+                                /> -->
                             </div>
                             <div class="login__form">
                                 <!-- form start -->
