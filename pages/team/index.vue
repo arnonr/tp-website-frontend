@@ -298,7 +298,7 @@
                                                 "
                                             >
                                                 <div
-                                                    class="row justify-content-md-center"
+                                                    class="text-center row justify-content-md-center"
                                                 >
                                                     <!-- รอง 1 -->
                                                     <div
@@ -518,6 +518,18 @@
                                                             </span>
                                                         </div>
                                                     </div>
+                                                </div>
+                                            </div>
+                                            <!-- อ.วัชรินทร์ -->
+                                            <div
+                                                class="col-md-12"
+                                                style="
+                                                    margin-top: 20px !important;
+                                                "
+                                            >
+                                                <div
+                                                    class="text-center row justify-content-md-center"
+                                                >
                                                     <!-- รอง 3 -->
                                                     <div
                                                         class="team__item-10 col-lg-3 mt-20"
@@ -627,18 +639,7 @@
                                                             </span>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <!-- อ.วัชรินทร์ -->
-                                            <div
-                                                class="col-md-12"
-                                                style="
-                                                    margin-top: 20px !important;
-                                                "
-                                            >
-                                                <div
-                                                    class="text-center row justify-content-md-center"
-                                                >
+
                                                     <div
                                                         class="team__item-10 col-lg-3 mt-20"
                                                     >
@@ -746,8 +747,8 @@
                                                 </div>
                                             </div>
 
-                                              <!-- หัวหน้า สำนักงาน -->
-                                              <div
+                                            <!-- หัวหน้า สำนักงาน -->
+                                            <div
                                                 class="col-md-12"
                                                 style="
                                                     margin-top: 20px !important;
