@@ -866,7 +866,7 @@
                                                                         ></i>
                                                                         {{
                                                                             dp
-                                                                                .teamItems[4]
+                                                                                .teamItems[5]
                                                                                 .phone
                                                                         }}
                                                                     </p>
