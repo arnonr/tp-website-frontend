@@ -128,6 +128,14 @@
                                                         <div
                                                             class="team__contact-wrapper"
                                                         >
+                                                            <p class="team-tel">
+                                                                <i
+                                                                    class="fa fa-phone"
+                                                                ></i>
+                                                                {{
+                                                                   it.phone
+                                                                }}
+                                                            </p>
                                                             <p
                                                                 class="team-email mt-20"
                                                                 style="
