@@ -233,10 +233,18 @@
                                                                 <div
                                                                     class="team__contact-wrapper"
                                                                 >
-                                                                    <!-- <p class="team-tel">
-                                    <i class="fa fa-phone"></i>
-                                    {{ dp.teamItems[0].phone }}
-                                  </p> -->
+                                                                    <p
+                                                                        class="team-tel"
+                                                                    >
+                                                                        <i
+                                                                            class="fa fa-phone"
+                                                                        ></i>
+                                                                        {{
+                                                                            dp
+                                                                                .teamItems[0]
+                                                                                .phone
+                                                                        }}
+                                                                    </p>
                                                                     <p
                                                                         class="team-email mt-20"
                                                                         style="
@@ -354,10 +362,18 @@
                                                                 <div
                                                                     class="team__contact-wrapper"
                                                                 >
-                                                                    <!-- <p class="team-tel">
-                                    <i class="fa fa-phone"></i>
-                                    {{ dp.teamItems[1].phone }}
-                                  </p> -->
+                                                                    <p
+                                                                        class="team-tel"
+                                                                    >
+                                                                        <i
+                                                                            class="fa fa-phone"
+                                                                        ></i>
+                                                                        {{
+                                                                            dp
+                                                                                .teamItems[1]
+                                                                                .phone
+                                                                        }}
+                                                                    </p>
                                                                     <p
                                                                         class="team-email mt-20"
                                                                         style="
@@ -463,10 +479,18 @@
                                                                 <div
                                                                     class="team__contact-wrapper"
                                                                 >
-                                                                    <!-- <p class="team-tel">
-                                    <i class="fa fa-phone"></i>
-                                    {{ dp.teamItems[2].phone }}
-                                  </p> -->
+                                                                    <p
+                                                                        class="team-tel"
+                                                                    >
+                                                                        <i
+                                                                            class="fa fa-phone"
+                                                                        ></i>
+                                                                        {{
+                                                                            dp
+                                                                                .teamItems[2]
+                                                                                .phone
+                                                                        }}
+                                                                    </p>
                                                                     <p
                                                                         class="team-email mt-20"
                                                                         style="
@@ -584,10 +608,18 @@
                                                                 <div
                                                                     class="team__contact-wrapper"
                                                                 >
-                                                                    <!-- <p class="team-tel">
-                                    <i class="fa fa-phone"></i>
-                                    {{ dp.teamItems[3].phone }}
-                                  </p> -->
+                                                                    <p
+                                                                        class="team-tel"
+                                                                    >
+                                                                        <i
+                                                                            class="fa fa-phone"
+                                                                        ></i>
+                                                                        {{
+                                                                            dp
+                                                                                .teamItems[3]
+                                                                                .phone
+                                                                        }}
+                                                                    </p>
                                                                     <p
                                                                         class="team-email mt-20"
                                                                         style="
@@ -693,10 +725,18 @@
                                                                 <div
                                                                     class="team__contact-wrapper"
                                                                 >
-                                                                    <!-- <p class="team-tel">
-                                    <i class="fa fa-phone"></i>
-                                    {{ dp.teamItems[4].phone }}
-                                  </p> -->
+                                                                    <p
+                                                                        class="team-tel"
+                                                                    >
+                                                                        <i
+                                                                            class="fa fa-phone"
+                                                                        ></i>
+                                                                        {{
+                                                                            dp
+                                                                                .teamItems[4]
+                                                                                .phone
+                                                                        }}
+                                                                    </p>
                                                                     <p
                                                                         class="team-email mt-20"
                                                                         style="
@@ -810,10 +850,18 @@
                                                                 <div
                                                                     class="team__contact-wrapper"
                                                                 >
-                                                                    <!-- <p class="team-tel">
-                                    <i class="fa fa-phone"></i>
-                                    {{ dp.teamItems[4].phone }}
-                                  </p> -->
+                                                                    <p
+                                                                        class="team-tel"
+                                                                    >
+                                                                        <i
+                                                                            class="fa fa-phone"
+                                                                        ></i>
+                                                                        {{
+                                                                            dp
+                                                                                .teamItems[4]
+                                                                                .phone
+                                                                        }}
+                                                                    </p>
                                                                     <p
                                                                         class="team-email mt-20"
                                                                         style="
