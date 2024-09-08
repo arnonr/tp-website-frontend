@@ -37,14 +37,19 @@
                         <nav>
                             <ul>
                                 <li>
-                                    <nuxt-link to="/" @click="closeOffcanvas"
+                                    <nuxt-link
+                                        to="/"
+                                        @click="closeOffcanvas"
+                                        class="fw-bold"
                                         >หน้าหลัก</nuxt-link
                                     >
                                 </li>
                                 <hr />
-                                <li>
-                                    <nuxt-link>หลักสูตร</nuxt-link>
-                                    <ul style="list-style: none">
+                                <li class="mt-3">
+                                    <nuxt-link class="fw-bold"
+                                        >หลักสูตร</nuxt-link
+                                    >
+                                    <ul style="list-style: none" class="mt-2">
                                         <li>
                                             <nuxt-link
                                                 to="/course/1"
@@ -57,10 +62,10 @@
                                     </ul>
                                 </li>
                                 <hr />
-                                <li>
-                                    <nuxt-link>CWIE</nuxt-link>
-                                    <ul style="list-style: none">
-                                        <li class="mt-2">
+                                <li class="mt-3">
+                                    <nuxt-link class="fw-bold">CWIE</nuxt-link>
+                                    <ul style="list-style: none" class="mt-2">
+                                        <li>
                                             <nuxt-link
                                                 to="/cwie/1"
                                                 @click="closeOffcanvas"
@@ -68,7 +73,8 @@
                                                 CWIE</nuxt-link
                                             >
                                         </li>
-                                        <li class="mt-2">
+                                        <hr style="margin: 0.4rem 0" />
+                                        <li>
                                             <nuxt-link
                                                 to="/cwie/2"
                                                 @click="closeOffcanvas"
@@ -76,49 +82,56 @@
                                                 CWIE</nuxt-link
                                             >
                                         </li>
-                                        <li class="mt-2">
+                                        <hr style="margin: 0.4rem 0" />
+                                        <li>
                                             <nuxt-link
                                                 to="/cwie/3"
                                                 @click="closeOffcanvas"
                                                 >- ระบบสารสนเทศ CWIE</nuxt-link
                                             >
                                         </li>
-                                        <li class="mt-2">
+                                        <hr style="margin: 0.4rem 0" />
+                                        <li>
                                             <nuxt-link
                                                 to="/cwie/4"
                                                 @click="closeOffcanvas"
                                                 >- คู่มือ CWIE</nuxt-link
                                             >
                                         </li>
-                                        <li class="mt-2">
+                                        <hr style="margin: 0.4rem 0" />
+                                        <li>
                                             <nuxt-link
                                                 to="/cwie/5"
                                                 @click="closeOffcanvas"
                                                 >- เอกสารดาวน์โหลด</nuxt-link
                                             >
                                         </li>
-                                        <li class="mt-2">
+                                        <hr style="margin: 0.4rem 0" />
+                                        <li>
                                             <nuxt-link
                                                 to="/cwie/6"
                                                 @click="closeOffcanvas"
                                                 >- ประโยชน์ของ CWIE</nuxt-link
                                             >
                                         </li>
-                                        <li class="mt-2">
+                                        <hr style="margin: 0.4rem 0" />
+                                        <li>
                                             <nuxt-link
                                                 to="/cwie/7"
                                                 @click="closeOffcanvas"
                                                 >- รางวัล CWIE ดีเด่น</nuxt-link
                                             >
                                         </li>
-                                        <li class="mt-2">
+                                        <hr style="margin: 0.4rem 0" />
+                                        <li>
                                             <nuxt-link
                                                 to="/cwie/8"
                                                 @click="closeOffcanvas"
                                                 >- ปฏิทิน CWIE มจพ.</nuxt-link
                                             >
                                         </li>
-                                        <li class="mt-2">
+                                        <hr style="margin: 0.4rem 0" />
+                                        <li>
                                             <nuxt-link
                                                 to="/cwie/9"
                                                 @click="closeOffcanvas"
@@ -126,7 +139,8 @@
                                                 ภาคกลางตอนบน</nuxt-link
                                             >
                                         </li>
-                                        <li class="mt-2">
+                                        <hr style="margin: 0.4rem 0" />
+                                        <li>
                                             <nuxt-link
                                                 to="https://forms.gle/XzuhcaMrBmNdYfrt8"
                                                 @click="closeOffcanvas"
@@ -136,17 +150,20 @@
                                     </ul>
                                 </li>
                                 <hr />
-                                <li>
-                                    <nuxt-link>- งานบริการวิชาการ</nuxt-link>
-                                    <ul style="text-indent: 2em">
-                                        <li class="mt-2">
+                                <li class="mt-3">
+                                    <nuxt-link class="fw-bold"
+                                        >งานบริการวิชาการ</nuxt-link
+                                    >
+                                    <ul style="list-style: none" class="mt-2">
+                                        <li>
                                             <nuxt-link
                                                 to="/department"
                                                 @click="closeOffcanvas"
                                                 >- หน่วยงาน</nuxt-link
                                             >
                                         </li>
-                                        <li class="mt-2">
+                                        <hr style="margin: 0.4rem 0" />
+                                        <li>
                                             <nuxt-link
                                                 to="/serve"
                                                 @click="closeOffcanvas"
@@ -157,12 +174,12 @@
                                     </ul>
                                 </li>
                                 <hr />
-                                <li>
-                                    <nuxt-link
-                                        >- งานทรัพย์สินทางปัญญา</nuxt-link
+                                <li class="mt-3">
+                                    <nuxt-link class="fw-bold"
+                                        >งานทรัพย์สินทางปัญญา</nuxt-link
                                     >
-                                    <ul style="text-indent: 2em">
-                                        <li class="mt-2">
+                                    <ul style="list-style: none" class="mt-2">
+                                        <li>
                                             <nuxt-link
                                                 to="/intellectual/1"
                                                 @click="closeOffcanvas"
@@ -170,7 +187,8 @@
                                                 งานทรัพย์สินทางปัญญา</nuxt-link
                                             >
                                         </li>
-                                        <li class="mt-2">
+                                        <hr style="margin: 0.4rem 0" />
+                                        <li>
                                             <nuxt-link
                                                 to="/intellectual/2"
                                                 @click="closeOffcanvas"
@@ -189,52 +207,60 @@
                                     >
                                 </li> -->
                                 <hr />
-                                <li>
-                                    <nuxt-link>- เกี่ยวกับเรา</nuxt-link>
-                                    <ul style="text-indent: 2em">
-                                        <li class="mt-2">
+                                <li class="mt-3">
+                                    <nuxt-link class="fw-bold"
+                                        >เกี่ยวกับเรา</nuxt-link
+                                    >
+                                    <ul style="list-style: none" class="mt-2">
+                                        <li>
                                             <nuxt-link
                                                 to="/about/1"
                                                 @click="closeOffcanvas"
                                                 >- ความเป็นมา</nuxt-link
                                             >
                                         </li>
-                                        <li class="mt-2">
+                                        <hr style="margin: 0.4rem 0" />
+                                        <li>
                                             <nuxt-link
                                                 to="/about/2"
                                                 @click="closeOffcanvas"
                                                 >- วิสัยทัศน์/พันธกิจ</nuxt-link
                                             >
                                         </li>
-                                        <li class="mt-2">
+                                        <hr style="margin: 0.4rem 0" />
+                                        <li>
                                             <nuxt-link
                                                 to="/about/3"
                                                 @click="closeOffcanvas"
                                                 >- สัญลักษณ์</nuxt-link
                                             >
                                         </li>
-                                        <li class="mt-2">
+                                        <hr style="margin: 0.4rem 0" />
+                                        <li>
                                             <nuxt-link
                                                 to="/about/4"
                                                 @click="closeOffcanvas"
                                                 >- โครงสร้างองค์กร</nuxt-link
                                             >
                                         </li>
-                                        <li class="mt-2">
+                                        <hr style="margin: 0.4rem 0" />
+                                        <li>
                                             <nuxt-link
                                                 to="/about/5"
                                                 @click="closeOffcanvas"
                                                 >- โครงสร้างบริหาร</nuxt-link
                                             >
                                         </li>
-                                        <li class="mt-2">
+                                        <hr style="margin: 0.4rem 0" />
+                                        <li>
                                             <nuxt-link
                                                 to="/team"
                                                 @click="closeOffcanvas"
                                                 >- บุคลากร</nuxt-link
                                             >
                                         </li>
-                                        <li class="mt-2">
+                                        <hr style="margin: 0.4rem 0" />
+                                        <li>
                                             <nuxt-link
                                                 to="/about/6"
                                                 @click="closeOffcanvas"
@@ -242,7 +268,8 @@
                                                 แบบฟอร์มสำหรับบุคลากร</nuxt-link
                                             >
                                         </li>
-                                        <li class="mt-2">
+                                        <hr style="margin: 0.4rem 0" />
+                                        <li>
                                             <nuxt-link
                                                 to="/about/7"
                                                 @click="closeOffcanvas"
@@ -252,11 +279,12 @@
                                     </ul>
                                 </li>
                                 <hr />
-                                <li>
+                                <li class="mt-3">
                                     <nuxt-link
+                                        class="fw-bold"
                                         to="/contact-us"
                                         @click="closeOffcanvas"
-                                        >- ติดต่อสอบถาม</nuxt-link
+                                        >ติดต่อสอบถาม</nuxt-link
                                     >
                                 </li>
                             </ul>
