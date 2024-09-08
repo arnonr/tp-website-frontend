@@ -38,13 +38,13 @@
                             <ul>
                                 <li>
                                     <nuxt-link to="/" @click="closeOffcanvas"
-                                        >- หน้าหลัก</nuxt-link
+                                        >หน้าหลัก</nuxt-link
                                     >
                                 </li>
                                 <hr />
                                 <li>
-                                    <nuxt-link>- หลักสูตร</nuxt-link>
-                                    <ul style="text-indent: 2em">
+                                    <nuxt-link>หลักสูตร</nuxt-link>
+                                    <ul style="list-style: none">
                                         <li>
                                             <nuxt-link
                                                 to="/course/1"
@@ -58,8 +58,8 @@
                                 </li>
                                 <hr />
                                 <li>
-                                    <nuxt-link>- CWIE</nuxt-link>
-                                    <ul style="text-indent: 2em">
+                                    <nuxt-link>CWIE</nuxt-link>
+                                    <ul style="list-style: none">
                                         <li class="mt-2">
                                             <nuxt-link
                                                 to="/cwie/1"
@@ -229,7 +229,7 @@
                                         </li>
                                         <li class="mt-2">
                                             <nuxt-link
-                                                to="/about/6"
+                                                to="/team"
                                                 @click="closeOffcanvas"
                                                 >- บุคลากร</nuxt-link
                                             >
