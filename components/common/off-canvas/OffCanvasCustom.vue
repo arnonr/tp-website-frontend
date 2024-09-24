@@ -142,7 +142,7 @@
                                         <hr style="margin: 0.4rem 0" />
                                         <li>
                                             <nuxt-link
-                                                to="https://forms.gle/XzuhcaMrBmNdYfrt8"
+                                                to="https://technopark.kmutnb.ac.th/coopday/index.php?r=site/register"
                                                 @click="closeOffcanvas"
                                                 >- ประกวดผลงาน CWIE</nuxt-link
                                             >
