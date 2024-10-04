@@ -132,6 +132,19 @@
 
                             <div class="form-group mt-10">
                                 <label for="" class="label label-required"
+                                    >ฝ่ายงาน :
+                                </label>
+                                <div>
+                                    <input
+                                        type="text"
+                                        class="form-control form-control-plaintext"
+                                        v-model="item.sub_department"
+                                    />
+                                </div>
+                            </div>
+
+                            <div class="form-group mt-10">
+                                <label for="" class="label label-required"
                                     >เบอร์โทรภายใน :
                                 </label>
                                 <div>
@@ -235,6 +248,7 @@ const item = ref({
     position_level: "",
     phone: "",
     email: "",
+    sub_department: "",
     department_team_id: null,
     is_publish: {
         id: 1,
