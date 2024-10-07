@@ -173,7 +173,10 @@
                                         </div>
                                         <!-- อำนวยการ -->
                                         <div class="row" v-if="dp.id == 3">
-                                            <div class="mt-40">
+                                            <div
+                                                class="mt-40"
+                                                style="margin-top: 40px"
+                                            >
                                                 <h3>งานคลังและพัสดุ</h3>
                                             </div>
                                             <template
@@ -286,7 +289,7 @@
                                                     </div>
                                                 </div>
                                             </template>
-                                            <div class="mt-40">
+                                            <div class="mt-40"  style="margin-top: 40px">
                                                 <h3>
                                                     งานทรัพยากรมนุษย์และการบริหารสำนักงาน
                                                 </h3>
@@ -401,7 +404,7 @@
                                                     </div>
                                                 </div>
                                             </template>
-                                            <div class="mt-40">
+                                            <div class="mt-40"  style="margin-top: 40px">
                                                 <h3>
                                                     งานอาคารสถานที่และพัฒนาสิ่งแวดล้อม
                                                 </h3>
