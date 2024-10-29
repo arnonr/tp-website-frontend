@@ -186,6 +186,13 @@
                                                 >-
                                                 งานทรัพย์สินทางปัญญา</nuxt-link
                                             >
+                                        </li> <hr style="margin: 0.4rem 0" />
+                                        <li>
+                                            <nuxt-link
+                                                to="/intellectual/3"
+                                                @click="closeOffcanvas"
+                                                >- KMUTNB MOOC</nuxt-link
+                                            >
                                         </li>
                                         <hr style="margin: 0.4rem 0" />
                                         <li>

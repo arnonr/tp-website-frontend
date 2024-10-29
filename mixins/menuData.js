@@ -75,6 +75,10 @@ export default {
                             link: "/intellectual/1",
                         },
                         {
+                            title: "KMUTNB MOOC",
+                            link: "/intellectual/3",
+                        },
+                        {
                             title: "เอกสารดาวน์โหลด",
                             link: "/intellectual/2",
                         },
