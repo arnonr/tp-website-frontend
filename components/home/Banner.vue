@@ -1,19 +1,6 @@
 <template>
-    <section class="slider__area p-relative" v-if="items.length != 0">
+    <section class="" v-if="items.length != 0">
         <swiper
-            class="slider__active-12 slider__height-12 swiper-container"
-            :slidesPerView="1"
-            :spaceBetween="0"
-            :effect="'fade'"
-            :loop="true"
-            :modules="modules"
-            :preventClicks="false"
-            :preventClicksPropagation="false"
-            :slideToClickedSlide="false"
-            :autoplay="{
-                delay: 5000,
-                disableOnInteraction: true,
-            }"
             :pagination="{
                 clickable: true,
             }"
@@ -21,34 +8,40 @@
                 nextEl: '.slider-button-12-next',
                 prevEl: '.slider-button-12-prev',
             }"
-            v-if="items.length != 0"
+            :preventClicks="false"
+            :effect="'fade'"
+            :modules="modules"
+            :loop="true"
+            class="swiper-fullwidth"
+            :breakpoints="{
+                '0': {
+                    slidesPerView: 1,
+                },
+                '768': {
+                    slidesPerView: 1,
+                },
+                '992': {
+                    slidesPerView: 1,
+                },
+            }"
+            :speed="5000"
+            :autoplay="{
+                delay: 5000,
+                disableOnInteraction: true,
+            }"
         >
-            <swiper-slide
-                :class="`slider__item-11 slider__bg-11 ${it.bg} d-flex align-items-center`"
-                v-for="it in items"
-                :key="it.id"
-            >
-                <a :href="it.banner_url">
-                    <img
-                        class="banner-image"
-                        :src="it.banner_file"
-                        :alt="it.title"
-                        style="width: 100%"
-                    />
-                </a>
+            <swiper-slide v-for="(it, index) in items" :key="index">
+                <div class="slide-content">
+                    <a :href="it.banner_url">
+                        <img
+                            :src="it.banner_file"
+                            :alt="it.title"
+                            class="slide-image"
+                            style="width: 100%"
+                        />
+                    </a>
+                </div>
             </swiper-slide>
-
-            <div class="slider-pagination-12 tp-swiper-fraction"></div>
-            <div
-                class="slider__nav-arrow-12 d-flex flex-column d-none d-md-block"
-            >
-                <button class="slider-button-12-next">
-                    <i class="fa-regular fa-chevron-right"></i>
-                </button>
-                <button class="slider-button-12-prev">
-                    <i class="fa-regular fa-chevron-left"></i>
-                </button>
-            </div>
         </swiper>
     </section>
 </template>
@@ -58,10 +51,16 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import {
     EffectFade,
     Mousewheel,
+    Keyboard,
+    FreeMode,
     Navigation,
     Pagination,
     Autoplay,
+    Scrollbar,
+    Thumbs,
 } from "swiper";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 export default {
     components: { Swiper, SwiperSlide },
     async setup() {
@@ -72,8 +71,21 @@ export default {
               <span class="${totalClass}"></span>`;
         };
 
+        // const items = ref([
+        //     {
+        //         id: 1,
+        //         title: "Banner 1",
+        //         banner_file: "/images/banner/banner1.jpeg",
+        //     },
+        //     {
+        //         id: 1,
+        //         title: "Banner 2",
+        //         banner_file: "/images/banner/banner2.jpeg",
+        //     },
+        // ]);
+
         const items = ref([]);
-        const { data: res } = await useAsyncData("banner", async () => {
+         const { data: res } = await useAsyncData("banner", async () => {
             let data = await $fetch(`${runtimeConfig.public.apiBase}/banner`, {
                 params: {
                     is_publish: 1,
@@ -85,10 +97,21 @@ export default {
 
         items.value = res.value.data;
 
+
         return {
             items,
             renderFraction,
-            modules: [EffectFade, Mousewheel, Navigation, Pagination, Autoplay],
+            modules: [
+                Autoplay,
+                FreeMode,
+                Navigation,
+                Pagination,
+                Scrollbar,
+                Thumbs,
+                Keyboard,
+                EffectFade,
+                Mousewheel,
+            ],
         };
     },
 };
