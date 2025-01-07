@@ -44,7 +44,7 @@ export default {
                         },
                         {
                             title: "ประกวดผลงาน CWIE",
-                            link: "https://technopark.kmutnb.ac.th/coopday/index.php?r=site/register",
+                            link: "https://technopark.kmutnb.ac.th/coopday/",
                         },
                     ],
                 },
