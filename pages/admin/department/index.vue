@@ -276,6 +276,11 @@ useHead({
     title: "รายการหน่วยงาน",
 });
 
+
+definePageMeta({
+    middleware: "auth",
+});
+
 // definePageMeta({
 //     middleware: "auth",
 // });

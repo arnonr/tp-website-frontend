@@ -551,4 +551,9 @@ onMounted(async () => {
         return Number(res.value.data.is_publish) == x.value;
     });
 });
+
+
+definePageMeta({
+    middleware: "auth",
+});
 </script>

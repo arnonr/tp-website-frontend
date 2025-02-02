@@ -282,6 +282,11 @@ useHead({
     title: "รายการบุคลากร",
 });
 
+
+definePageMeta({
+    middleware: "auth",
+});
+
 // definePageMeta({
 //     middleware: "auth",
 // });

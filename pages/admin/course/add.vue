@@ -195,4 +195,9 @@ onMounted(() => {});
 useHead({
     title: `เพิ่มข้อมูล${$name_page}`,
 });
+
+
+definePageMeta({
+    middleware: "auth",
+});
 </script>

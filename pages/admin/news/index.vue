@@ -339,6 +339,11 @@ onMounted(() => {
 useHead({
     title: "รายการข่าว",
 });
+
+
+definePageMeta({
+    middleware: "auth",
+});
 </script>
 
 <style scoped></style>

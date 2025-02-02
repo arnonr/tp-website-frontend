@@ -472,4 +472,9 @@ onMounted(() => {
     fetchDepartments();
     fetchServiceCategories();
 });
+
+
+definePageMeta({
+    middleware: "auth",
+});
 </script>

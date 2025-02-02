@@ -205,7 +205,7 @@ export default {
     data() {
         return {
             isSticky: false,
-            authenticated: useCookie("token"), //authenticated.value,
+            authenticated: useCookie("tp_token"), //authenticated.value,
             isModalVisible: false,
         };
     },

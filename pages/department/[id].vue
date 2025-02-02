@@ -207,6 +207,7 @@ item.value = res.value.data;
 useHead({
     title: item.value.name_th,
 });
+
 </script>
 
 <style scoped>

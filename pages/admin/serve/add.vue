@@ -441,4 +441,9 @@ onMounted(() => {
 useHead({
     title: "เพิ่มงานบริการวิชาการ",
 });
+
+
+definePageMeta({
+    middleware: "auth",
+});
 </script>

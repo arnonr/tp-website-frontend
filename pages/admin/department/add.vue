@@ -304,4 +304,9 @@ onMounted(() => {});
 useHead({
     title: "เพิ่มหน่วยงาน",
 });
+
+
+definePageMeta({
+    middleware: "auth",
+});
 </script>

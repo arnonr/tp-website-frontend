@@ -373,6 +373,11 @@ const onDelete = async (id) => {
 useHead({
     title: "ข่าวประชาสัมพันธ์",
 });
+
+
+definePageMeta({
+    middleware: "auth",
+});
 </script>
 
 <style scoped>

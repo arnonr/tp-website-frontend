@@ -269,6 +269,12 @@ useHead({
     title: `รายการข้อมูล${$name_page}`,
 });
 
+
+
+definePageMeta({
+    middleware: "auth",
+});
+
 // definePageMeta({
 //     middleware: "auth",
 // });

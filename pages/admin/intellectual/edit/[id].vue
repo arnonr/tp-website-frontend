@@ -226,4 +226,9 @@ onMounted(() => {
 useHead({
     title: `แก้ไข${$name_page}`,
 });
+
+
+definePageMeta({
+    middleware: "auth",
+});
 </script>

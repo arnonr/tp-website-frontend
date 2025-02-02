@@ -381,4 +381,9 @@ onMounted(() => {
 useHead({
     title: "แก้ไขหน่วยงาน",
 });
+
+
+definePageMeta({
+    middleware: "auth",
+});
 </script>

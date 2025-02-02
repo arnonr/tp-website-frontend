@@ -199,4 +199,9 @@ onMounted(() => {});
 useHead({
     title: `แก้ไขข้อมูล${$name_page}`,
 });
+
+
+definePageMeta({
+    middleware: "auth",
+});
 </script>
