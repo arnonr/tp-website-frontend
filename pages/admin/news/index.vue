@@ -331,15 +331,20 @@ watchEffect(() => {
 
 // Event
 onMounted(() => {
-    fetchDepartments();
-    fetchNewsTypes();
-    fetchItems();
+    const token = useCookie("tp_token").value;
+
+    if (!token) {
+        router.replace("/"); // Redirect ทันที
+    } else {
+        fetchDepartments();
+        fetchNewsTypes();
+        fetchItems();
+    }
 });
 
 useHead({
     title: "รายการข่าว",
 });
-
 
 definePageMeta({
     middleware: "auth",
