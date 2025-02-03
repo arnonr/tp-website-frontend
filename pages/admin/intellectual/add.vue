@@ -1,5 +1,8 @@
 <template>
-    <section class="breadcrumb__area include-bg pb-40 pt-30 grey-bg-4">
+    <section
+        class="breadcrumb__area include-bg pb-40 pt-30 grey-bg-4"
+        v-if="token"
+    >
         <div class="container">
             <div class="row">
                 <div class="col-xxl-12">
@@ -25,7 +28,7 @@
         </div>
     </section>
 
-    <section class="portfolio__area pt-40 pb-40">
+    <section class="portfolio__area pt-40 pb-40" v-if="token">
         <div class="container">
             <div class="row">
                 <div class="col-12 mb-20">
@@ -190,12 +193,17 @@ const onSubmit = async () => {
         .catch((error) => error.data);
 };
 
-onMounted(() => {});
+const token = ref(null);
+onMounted(() => {
+    token.value = useCookie("tp_token").value;
+    if (!token.value) {
+        router.replace("/"); // Redirect ทันที
+    }
+});
 
 useHead({
     title: `เพิ่มข้อมูล${$name_page}`,
 });
-
 
 definePageMeta({
     middleware: "auth",

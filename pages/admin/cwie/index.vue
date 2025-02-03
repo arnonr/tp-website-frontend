@@ -1,5 +1,8 @@
 <template>
-    <section class="breadcrumb__area include-bg pb-40 pt-30 grey-bg-4">
+    <section
+        class="breadcrumb__area include-bg pb-40 pt-30 grey-bg-4"
+        v-if="token"
+    >
         <div class="container">
             <div class="row">
                 <div class="col-xxl-12">
@@ -17,7 +20,7 @@
         </div>
     </section>
 
-    <section class="portfolio__area pt-40">
+    <section class="portfolio__area pt-40" v-if="token">
         <div class="container">
             <div class="mt-10 mb-30 pl-10 pt-15 pb-10 bg-grey">
                 <h4 class="section-bg-primary mb-20">
@@ -42,7 +45,7 @@
         </div>
     </section>
 
-    <section class="portfolio__area pb-20">
+    <section class="portfolio__area pb-20" v-if="token">
         <div class="container">
             <div class="mt-10 mb-30 pl-10 pt-15 pb-10 bg-grey">
                 <h4 class="section-bg-primary mb-20">
@@ -178,7 +181,7 @@ dayjs.extend(buddhistEra);
 const config = useRuntimeConfig();
 const { apiBase } = config.public;
 // const route = useRoute();
-// const router = useRouter();
+const router = useRouter();
 const $name_page = "CWIE";
 const $name_page_en = "cwie";
 const items = ref([]);
@@ -229,8 +232,13 @@ watchEffect(() => {
 });
 
 // Event
+const token = ref(null);
 onMounted(() => {
-    fetchItems();
+    if (!token.value) {
+        router.replace("/"); // Redirect ทันที
+    } else {
+        fetchItems();
+    }
 });
 
 const onConfirmDelete = async (id) => {
@@ -268,7 +276,6 @@ const onDelete = async (id) => {
 useHead({
     title: `รายการข้อมูล${$name_page}`,
 });
-
 
 definePageMeta({
     middleware: "auth",
