@@ -28,7 +28,7 @@
         </div>
     </section>
 
-    <section class="portfolio__area pt-40 pb-40" v-if="token" ◊>
+    <section class="portfolio__area pt-40 pb-40" v-if="token">
         <div class="container">
             <div class="row">
                 <div class="col-12 mb-20">
