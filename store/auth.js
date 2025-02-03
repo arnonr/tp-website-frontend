@@ -28,6 +28,8 @@ export const useAuthStore = defineStore("auth", {
                 token.value = data?.value?.token; // set token to cookie
                 const user = useCookie("user");
 
+                console.log(token.value)
+
                 user.value = {
                     id: data?.value?.id,
                     username: data?.value?.username,
