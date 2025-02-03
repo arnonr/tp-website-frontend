@@ -227,7 +227,7 @@ import basic_data from "~~/mixins/basicData";
 
 dayjs.extend(buddhistEra);
 // const route = useRoute();
-// const router = useRouter();
+const router = useRouter();
 
 const config = useRuntimeConfig();
 const { apiBase } = config.public;
