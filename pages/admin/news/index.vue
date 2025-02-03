@@ -1,5 +1,8 @@
 <template>
-    <section class="breadcrumb__area include-bg pb-40 pt-30 grey-bg-4" v-if="token">
+    <section
+        class="breadcrumb__area include-bg pb-40 pt-30 grey-bg-4"
+        v-if="token"
+    >
         <div class="container">
             <div class="row">
                 <div class="col-xxl-12">
@@ -329,12 +332,13 @@ watchEffect(() => {
         currentPage.value = totalPage.value;
 });
 
+const token = ref(null);
 // Event
 onMounted(() => {
     console.log(useCookie("tp_token").value);
-    const token = useCookie("tp_token").value;
+    token.value = useCookie("tp_token").value;
 
-    if (!token) {
+    if (!token.value) {
         router.replace("/"); // Redirect ทันที
     } else {
         fetchDepartments();
