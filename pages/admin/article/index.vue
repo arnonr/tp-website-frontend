@@ -181,7 +181,7 @@ dayjs.extend(buddhistEra);
 const config = useRuntimeConfig();
 const { apiBase } = config.public;
 // const route = useRoute();
-// const router = useRouter();
+const router = useRouter();
 const $name_page = "บทความ";
 const $name_page_en = "article";
 const items = ref([]);
@@ -232,10 +232,11 @@ watchEffect(() => {
 });
 
 // Event
+const token = ref(null);
 onMounted(() => {
-    const token = useCookie("tp_token").value;
+    token.value = useCookie("tp_token").value;
 
-    if (!token) {
+    if (!token.value) {
         router.replace("/"); // Redirect ทันที
     } else {
         fetchItems();

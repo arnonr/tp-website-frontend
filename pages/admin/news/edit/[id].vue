@@ -1,5 +1,8 @@
 <template>
-    <section class="breadcrumb__area include-bg pb-40 pt-30 grey-bg-4">
+    <section
+        class="breadcrumb__area include-bg pb-40 pt-30 grey-bg-4"
+        v-if="token"
+    >
         <div class="container">
             <div class="row">
                 <div class="col-xxl-12">
@@ -25,7 +28,7 @@
         </div>
     </section>
 
-    <section class="portfolio__area pt-40 pb-40">
+    <section class="portfolio__area pt-40 pb-40" v-if="token">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -93,7 +96,9 @@
 
                             <div class="form-group mt-10">
                                 <div class="row">
-                                    <label for="col-sm-12" class="label label-required"
+                                    <label
+                                        for="col-sm-12"
+                                        class="label label-required"
                                         >รูปภาพปก 500x350 :
                                     </label>
                                     <div class="col-sm-10">
@@ -541,17 +546,24 @@ const onSubmit = async () => {
         .catch((error) => error.data);
 };
 
+const token = ref(null);
+
 onMounted(async () => {
-    await fetchNewsTypes();
-    await fetchDepartments();
-    await fetchServiceCategories();
-    await fetchGallery();
+    token.value = useCookie("tp_token").value;
 
-    item.value.is_publish = selectOptions.value.publishes.find((x) => {
-        return Number(res.value.data.is_publish) == x.value;
-    });
+    if (!token.value) {
+        router.replace("/"); // Redirect ทันที
+    } else {
+        await fetchNewsTypes();
+        await fetchDepartments();
+        await fetchServiceCategories();
+        await fetchGallery();
+
+        item.value.is_publish = selectOptions.value.publishes.find((x) => {
+            return Number(res.value.data.is_publish) == x.value;
+        });
+    }
 });
-
 
 definePageMeta({
     middleware: "auth",

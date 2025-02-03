@@ -1,5 +1,8 @@
 <template>
-    <section class="breadcrumb__area include-bg pb-40 pt-30 grey-bg-4">
+    <section
+        class="breadcrumb__area include-bg pb-40 pt-30 grey-bg-4"
+        v-if="token"
+    >
         <div class="container">
             <div class="row">
                 <div class="col-xxl-12">
@@ -178,7 +181,7 @@ dayjs.extend(buddhistEra);
 const config = useRuntimeConfig();
 const { apiBase } = config.public;
 // const route = useRoute();
-// const router = useRouter();
+const router = useRouter();
 const $name_page = "เกี่ยวกับเรา";
 const $name_page_en = "about";
 const items = ref([]);
@@ -229,10 +232,11 @@ watchEffect(() => {
 });
 
 // Event
+const token = ref(null);
 onMounted(() => {
-    const token = useCookie("tp_token").value;
+    token.value = useCookie("tp_token").value;
 
-    if (!token) {
+    if (!token.value) {
         router.replace("/"); // Redirect ทันที
     } else {
         fetchItems();

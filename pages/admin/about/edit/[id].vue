@@ -1,5 +1,8 @@
 <template>
-    <section class="breadcrumb__area include-bg pb-40 pt-30 grey-bg-4" v-if="token">
+    <section
+        class="breadcrumb__area include-bg pb-40 pt-30 grey-bg-4"
+        v-if="token"
+    >
         <div class="container">
             <div class="row">
                 <div class="col-xxl-12">
@@ -219,11 +222,13 @@ const onSubmit = async () => {
         .catch((error) => error.data);
 };
 
+const token = ref(null);
 onMounted(() => {
     initFroala();
 
-    const token = useCookie("tp_token").value;
-    if (!token) {
+    token.value = useCookie("tp_token").value;
+
+    if (!token.value) {
         router.replace("/"); // Redirect ทันที
     }
 });

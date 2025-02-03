@@ -222,11 +222,12 @@ const onSubmit = async () => {
         .catch((error) => error.data);
 };
 
+const token = ref(null);
 onMounted(() => {
     initFroala();
-    const token = useCookie("tp_token").value;
+    token.value = useCookie("tp_token").value;
 
-    if (!token) {
+    if (!token.value) {
         router.replace("/"); // Redirect ทันที
     }
 });

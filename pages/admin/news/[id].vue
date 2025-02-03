@@ -1,5 +1,8 @@
 <template>
-    <section class="breadcrumb__area include-bg pb-40 pt-30 grey-bg-4">
+    <section
+        class="breadcrumb__area include-bg pb-40 pt-30 grey-bg-4"
+        v-if="token"
+    >
         <div class="container">
             <div class="row">
                 <div class="col-xxl-12" v-if="item != null">
@@ -21,7 +24,7 @@
         </div>
     </section>
     <!--  -->
-    <section class="postbox__area pt-40 pb-120">
+    <section class="postbox__area pt-40 pb-120" v-if="token">
         <div class="container">
             <div class="row">
                 <div class="col-xxl-12">
@@ -332,10 +335,16 @@ const fetchItem = async () => {
 
     item.value = data.data;
 };
-
+const token = ref(null);
 onMounted(() => {
-    fetchGallery();
-    fetchItem();
+    token.value = useCookie("tp_token").value;
+
+    if (!token.value) {
+        router.replace("/"); // Redirect ทันที
+    } else {
+        fetchGallery();
+        fetchItem();
+    }
 });
 
 // Event
@@ -373,7 +382,6 @@ const onDelete = async (id) => {
 useHead({
     title: "ข่าวประชาสัมพันธ์",
 });
-
 
 definePageMeta({
     middleware: "auth",

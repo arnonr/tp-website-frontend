@@ -335,7 +335,6 @@ watchEffect(() => {
 const token = ref(null);
 // Event
 onMounted(() => {
-    console.log(useCookie("tp_token").value);
     token.value = useCookie("tp_token").value;
 
     if (!token.value) {
