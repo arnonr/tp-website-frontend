@@ -7,7 +7,5 @@ export default defineNuxtRouteMiddleware((to, from) => {
 
     if (!token) {
         window.location.href = "/";
-        // const router = useRouter();
-        // router.replace("/"); // Redirect ไปหน้าใหม่โดยไม่เพิ่มลงใน history
     }
 });

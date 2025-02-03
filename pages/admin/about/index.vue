@@ -17,7 +17,7 @@
         </div>
     </section>
 
-    <section class="portfolio__area pt-40">
+    <section class="portfolio__area pt-40" v-if="token">
         <div class="container">
             <div class="mt-10 mb-30 pl-10 pt-15 pb-10 bg-grey">
                 <h4 class="section-bg-primary mb-20">
@@ -42,7 +42,7 @@
         </div>
     </section>
 
-    <section class="portfolio__area pb-20">
+    <section class="portfolio__area pb-20" v-if="token">
         <div class="container">
             <div class="mt-10 mb-30 pl-10 pt-15 pb-10 bg-grey">
                 <h4 class="section-bg-primary mb-20">
@@ -230,7 +230,13 @@ watchEffect(() => {
 
 // Event
 onMounted(() => {
-    fetchItems();
+    const token = useCookie("tp_token").value;
+
+    if (!token) {
+        router.replace("/"); // Redirect ทันที
+    } else {
+        fetchItems();
+    }
 });
 
 const onConfirmDelete = async (id) => {
