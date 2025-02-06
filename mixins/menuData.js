@@ -19,6 +19,10 @@ export default {
                             title: "เทคโนโลยีบัณฑิต เทคโนโลยียานยนต์สมัยใหม่และระบบอัตโนมัติ (MATA)",
                             link: "/course/1",
                         },
+                        {
+                            title: "ทุนการศึกษา",
+                            link: "/scholarship",
+                        },
                     ],
                 },
                 {
