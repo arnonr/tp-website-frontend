@@ -88,15 +88,10 @@
                                                 <div
                                                     class="team__thumb-10 p-relative m-img"
                                                 >
-                                                    <nuxt-link
-                                                        href="/team-details"
-                                                    >
-                                                        <img
-                                                            :src="it.team_file"
-                                                            alt=""
-                                                        />
-                                                    </nuxt-link>
-
+                                                    <img
+                                                        :src="it.team_file"
+                                                        alt=""
+                                                    />
                                                     <div
                                                         class="team__contact-overlay"
                                                     >
@@ -196,16 +191,10 @@
                                                     <div
                                                         class="team__thumb-10 p-relative m-img"
                                                     >
-                                                        <nuxt-link
-                                                            href="/team-details"
-                                                        >
-                                                            <img
-                                                                :src="
-                                                                    it.team_file
-                                                                "
-                                                                alt=""
-                                                            />
-                                                        </nuxt-link>
+                                                        <img
+                                                            :src="it.team_file"
+                                                            alt=""
+                                                        />
 
                                                         <div
                                                             class="team__contact-overlay"
@@ -314,16 +303,10 @@
                                                     <div
                                                         class="team__thumb-10 p-relative m-img"
                                                     >
-                                                        <nuxt-link
-                                                            href="/team-details"
-                                                        >
-                                                            <img
-                                                                :src="
-                                                                    it.team_file
-                                                                "
-                                                                alt=""
-                                                            />
-                                                        </nuxt-link>
+                                                        <img
+                                                            :src="it.team_file"
+                                                            alt=""
+                                                        />
 
                                                         <div
                                                             class="team__contact-overlay"
@@ -430,16 +413,10 @@
                                                     <div
                                                         class="team__thumb-10 p-relative m-img"
                                                     >
-                                                        <nuxt-link
-                                                            href="/team-details"
-                                                        >
-                                                            <img
-                                                                :src="
-                                                                    it.team_file
-                                                                "
-                                                                alt=""
-                                                            />
-                                                        </nuxt-link>
+                                                        <img
+                                                            :src="it.team_file"
+                                                            alt=""
+                                                        />
 
                                                         <div
                                                             class="team__contact-overlay"
@@ -548,16 +525,10 @@
                                                     <div
                                                         class="team__thumb-10 p-relative m-img"
                                                     >
-                                                        <nuxt-link
-                                                            href="/team-details"
-                                                        >
-                                                            <img
-                                                                :src="
-                                                                    it.team_file
-                                                                "
-                                                                alt=""
-                                                            />
-                                                        </nuxt-link>
+                                                        <img
+                                                            :src="it.team_file"
+                                                            alt=""
+                                                        />
 
                                                         <div
                                                             class="team__contact-overlay"
@@ -664,18 +635,14 @@
                                                         <div
                                                             class="team__thumb-10 p-relative m-img"
                                                         >
-                                                            <nuxt-link
-                                                                href="/team-details"
-                                                            >
-                                                                <img
-                                                                    :src="
-                                                                        dp
-                                                                            .teamItems[0]
-                                                                            .team_file
-                                                                    "
-                                                                    alt=""
-                                                                />
-                                                            </nuxt-link>
+                                                            <img
+                                                                :src="
+                                                                    dp
+                                                                        .teamItems[0]
+                                                                        .team_file
+                                                                "
+                                                                alt=""
+                                                            />
 
                                                             <div
                                                                 class="team__contact-overlay"
@@ -793,18 +760,14 @@
                                                         <div
                                                             class="team__thumb-10 p-relative m-img"
                                                         >
-                                                            <nuxt-link
-                                                                href="/team-details"
-                                                            >
-                                                                <img
-                                                                    :src="
-                                                                        dp
-                                                                            .teamItems[1]
-                                                                            .team_file
-                                                                    "
-                                                                    alt=""
-                                                                />
-                                                            </nuxt-link>
+                                                            <img
+                                                                :src="
+                                                                    dp
+                                                                        .teamItems[1]
+                                                                        .team_file
+                                                                "
+                                                                alt=""
+                                                            />
 
                                                             <div
                                                                 class="team__contact-overlay"
@@ -910,18 +873,14 @@
                                                         <div
                                                             class="team__thumb-10 p-relative m-img"
                                                         >
-                                                            <nuxt-link
-                                                                href="/team-details"
-                                                            >
-                                                                <img
-                                                                    :src="
-                                                                        dp
-                                                                            .teamItems[2]
-                                                                            .team_file
-                                                                    "
-                                                                    alt=""
-                                                                />
-                                                            </nuxt-link>
+                                                            <img
+                                                                :src="
+                                                                    dp
+                                                                        .teamItems[2]
+                                                                        .team_file
+                                                                "
+                                                                alt=""
+                                                            />
 
                                                             <div
                                                                 class="team__contact-overlay"
@@ -1027,19 +986,14 @@
                                                         <div
                                                             class="team__thumb-10 p-relative m-img"
                                                         >
-                                                            <nuxt-link
-                                                                href="/team-details"
-                                                            >
-                                                                <img
-                                                                    :src="
-                                                                        dp
-                                                                            .teamItems[4]
-                                                                            .team_file
-                                                                    "
-                                                                    alt=""
-                                                                />
-                                                            </nuxt-link>
-
+                                                            <img
+                                                                :src="
+                                                                    dp
+                                                                        .teamItems[4]
+                                                                        .team_file
+                                                                "
+                                                                alt=""
+                                                            />
                                                             <div
                                                                 class="team__contact-overlay"
                                                             >
@@ -1156,18 +1110,14 @@
                                                         <div
                                                             class="team__thumb-10 p-relative m-img"
                                                         >
-                                                            <nuxt-link
-                                                                href="/team-details"
-                                                            >
-                                                                <img
-                                                                    :src="
-                                                                        dp
-                                                                            .teamItems[3]
-                                                                            .team_file
-                                                                    "
-                                                                    alt=""
-                                                                />
-                                                            </nuxt-link>
+                                                            <img
+                                                                :src="
+                                                                    dp
+                                                                        .teamItems[3]
+                                                                        .team_file
+                                                                "
+                                                                alt=""
+                                                            />
 
                                                             <div
                                                                 class="team__contact-overlay"
@@ -1267,25 +1217,20 @@
                                                         </div>
                                                     </div>
 
-
                                                     <div
                                                         class="team__item-10 col-lg-3 mt-20"
                                                     >
                                                         <div
                                                             class="team__thumb-10 p-relative m-img"
                                                         >
-                                                            <nuxt-link
-                                                                href="/team-details"
-                                                            >
-                                                                <img
-                                                                    :src="
-                                                                        dp
-                                                                            .teamItems[6]
-                                                                            .team_file
-                                                                    "
-                                                                    alt=""
-                                                                />
-                                                            </nuxt-link>
+                                                            <img
+                                                                :src="
+                                                                    dp
+                                                                        .teamItems[6]
+                                                                        .team_file
+                                                                "
+                                                                alt=""
+                                                            />
 
                                                             <div
                                                                 class="team__contact-overlay"
@@ -1514,18 +1459,14 @@
                                                         <div
                                                             class="team__thumb-10 p-relative m-img"
                                                         >
-                                                            <nuxt-link
-                                                                href="/team-details"
-                                                            >
-                                                                <img
-                                                                    :src="
-                                                                        dp
-                                                                            .teamItems[5]
-                                                                            .team_file
-                                                                    "
-                                                                    alt=""
-                                                                />
-                                                            </nuxt-link>
+                                                            <img
+                                                                :src="
+                                                                    dp
+                                                                        .teamItems[5]
+                                                                        .team_file
+                                                                "
+                                                                alt=""
+                                                            />
 
                                                             <div
                                                                 class="team__contact-overlay"
