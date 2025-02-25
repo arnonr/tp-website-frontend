@@ -59,6 +59,22 @@
                                                 (MATA)</nuxt-link
                                             >
                                         </li>
+                                        <li>
+                                            <nuxt-link
+                                                to="https://technopark.kmutnb.ac.th/mata-en"
+                                                @click="closeOffcanvas"
+                                                >- Modern Automotive Technology and Automation System (English Program)</nuxt-link
+                                            >
+                                        </li>
+                                        <li>
+                                            <nuxt-link
+                                                to="/scholarship"
+                                                @click="closeOffcanvas"
+                                                >- เทคโนโลยีบัณฑิต
+                                                เทคโนโลยียานยนต์สมัยใหม่และระบบอัตโนมัติ
+                                                (MATA)</nuxt-link
+                                            >
+                                        </li>
                                     </ul>
                                 </li>
                                 <hr />

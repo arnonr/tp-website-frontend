@@ -20,6 +20,10 @@ export default {
                             link: "/course/1",
                         },
                         {
+                            title: "Modern Automotive Technology and Automation System (English Program)",
+                            link: "https://technopark.kmutnb.ac.th/mata-en",
+                        },
+                        {
                             title: "ทุนการศึกษา",
                             link: "/scholarship",
                         },
