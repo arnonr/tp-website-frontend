@@ -12,7 +12,7 @@
                 {{ menu.title }}
             </NuxtLink>
             <ul v-if="menu.hasDropdown" class="submenu">
-                <li v-for="(sub, i) in menu.submenus" :key="i" style="border-bottom: 1px solid #888;">
+                <li v-for="(sub, i) in menu.submenus" :key="i" style="border-bottom: 1px solid #ddd;">
                     <NuxtLink :to="sub.link">
                         {{ sub.title }}
                     </NuxtLink>
