@@ -63,7 +63,9 @@
                                             <nuxt-link
                                                 to="https://technopark.kmutnb.ac.th/mata-en"
                                                 @click="closeOffcanvas"
-                                                >- Modern Automotive Technology and Automation System (English Program)</nuxt-link
+                                                >- Modern Automotive Technology
+                                                and Automation System (English
+                                                Program)</nuxt-link
                                             >
                                         </li>
                                         <li>
@@ -181,6 +183,14 @@
                                         <hr style="margin: 0.4rem 0" />
                                         <li>
                                             <nuxt-link
+                                                to="http://skillhub.technopark.kmutnb.ac.th/home"
+                                                @click="closeOffcanvas"
+                                                >- หลักสูตรฝึกอบรม</nuxt-link
+                                            >
+                                        </li>
+                                        <hr style="margin: 0.4rem 0" />
+                                        <li>
+                                            <nuxt-link
                                                 to="/serve"
                                                 @click="closeOffcanvas"
                                                 >-
@@ -202,7 +212,8 @@
                                                 >-
                                                 งานทรัพย์สินทางปัญญา</nuxt-link
                                             >
-                                        </li> <hr style="margin: 0.4rem 0" />
+                                        </li>
+                                        <hr style="margin: 0.4rem 0" />
                                         <li>
                                             <nuxt-link
                                                 to="/intellectual/3"

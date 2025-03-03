@@ -67,6 +67,10 @@ export default {
                             link: "/department",
                         },
                         {
+                            title: "หลักสูตรฝึกอบรม",
+                            link: "http://skillhub.technopark.kmutnb.ac.th/home",
+                        },
+                        {
                             title: "งานบริการวิชาการทั้งหมด",
                             link: "/serve",
                         },
