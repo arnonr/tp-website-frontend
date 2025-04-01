@@ -36,7 +36,7 @@
                                             </span>
                                             <br />
                                             <span
-                                                >เมล : {{ contact_email }}</span
+                                                >อีเมล : {{ contact_email }}</span
                                             >
                                             <br />
                                             <br />
