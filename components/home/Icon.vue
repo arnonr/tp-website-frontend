@@ -9,7 +9,7 @@
           class="brand__item-6"
           v-for="(it, index) in icons"
           :key="index"
-          style="margin-bottom: 30px"
+          style="margin-bottom: 30px;max-width: 150px;"
         >
           <NuxtLink class="project-link-img" :to="it.url">
             <img :src="it.icon_file" :alt="it.name" style="width: 80%;"/>
@@ -60,6 +60,12 @@ const icons = ref([
     name: "Award & Standard Certificates",
     icon_file: "/images/iconwebtechnopark/icon_standard.png",
     url: "/article/4",
+  },
+  {
+    id: 6,
+    name: "Intellectual Property",
+    icon_file: "/images/iconwebtechnopark/icon_intellectual.png",
+    url: "/intellectual/1",
   },
 ]);
 </script>
