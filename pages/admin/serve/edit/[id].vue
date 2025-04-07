@@ -475,6 +475,7 @@ const onSubmit = async () => {
 
 const token = ref(null);
 onMounted(() => {
+    token.value = useCookie("tp_token").value;
     if (!token.value) {
         router.replace("/"); // Redirect ทันที
     } else {
