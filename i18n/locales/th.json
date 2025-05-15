@@ -47,5 +47,10 @@
     "Address2": "บางซื่อ กรุงเทพมหานคร 10800",
     "Phone": "โทรศัพท์",
     "Email": "อีเมล",
-    "KMUTNB MOOC": "KMUTNB MOOC"
+    "KMUTNB MOOC": "KMUTNB MOOC",
+    "Department": "หน่วยงาน",
+    "Services": "งานบริการวิชาการ",
+    "News": "ข่าวประชาสัมพันธ์",
+    "Contact": "ติดต่อหน่วยงาน",
+    "View Detail": "รายละเอียด"
 }

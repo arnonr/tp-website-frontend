@@ -11,7 +11,9 @@
                                 }"
                                 style="padding: 10px"
                             >
-                                {{ item.name_th }}
+                                {{
+                                    locale == "th" ? item.name_th : item.name_en
+                                }}
                             </NuxtLink>
                         </div>
 
@@ -22,7 +24,7 @@
                                         path: '/',
                                     }"
                                 >
-                                    หน้าหลัก
+                                    {{ t("Home") }}
                                 </NuxtLink>
                             </span>
                             <span class="dvdr breadcrumb-item-1"
@@ -35,14 +37,18 @@
                                         path: '/department',
                                     }"
                                 >
-                                    หน่วยงาน</NuxtLink
+                                    {{ t("Department") }}</NuxtLink
                                 >
                             </span>
 
                             <span class="dvdr breadcrumb-item-1"
                                 ><i class="fa-solid fa-circle-small"></i
                             ></span>
-                            <span> {{ item.name_th }} </span>
+                            <span>
+                                {{
+                                    locale == "th" ? item.name_th : item.name_en
+                                }}
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -76,9 +82,9 @@
                                         >
                                             <h4 class="section-bg-primary">
                                                 <i class="fa-solid fa-home"></i>
-                                                <span class="ml-10"
-                                                    >ข้อมูลหน่วยงาน</span
-                                                >
+                                                <span class="ml-10">{{
+                                                    t("Department")
+                                                }}</span>
                                             </h4>
                                         </div>
 
@@ -89,7 +95,9 @@
                                                 v-html="
                                                     item.detail_th == null
                                                         ? ''
-                                                        : item.detail_th
+                                                        : locale == 'th'
+                                                        ? item.detail_th
+                                                        : item.detail_en
                                                 "
                                             ></div>
                                         </div>
@@ -104,7 +112,7 @@
                                                     class="fas fa-chalkboard-teacher"
                                                 ></i>
                                                 <span class="ml-10">{{
-                                                    "งานบริการวิชาการ"
+                                                    t("Services")
                                                 }}</span>
                                             </h4>
                                         </div>
@@ -128,7 +136,7 @@
                                                     class="fa-solid fa-newspaper"
                                                 ></i>
                                                 <span class="ml-10">{{
-                                                    "ข่าวประชาสัมพันธ์"
+                                                    t("News")
                                                 }}</span>
                                             </h4>
                                         </div>
@@ -152,18 +160,21 @@
                                                     class="fa-solid fa-phone"
                                                 ></i>
                                                 <span class="ml-10">{{
-                                                    "ติดต่อหน่วยงาน"
+                                                    t("Contact")
                                                 }}</span>
                                             </h4>
                                         </div>
                                         <div
                                             class="postbox__details-content-wrapper p-2"
                                         >
+
                                             <div
                                                 v-html="
                                                     item.contact_th == null
                                                         ? ''
-                                                        : item.contact_th
+                                                        : locale == 'th'
+                                                        ? item.contact_th
+                                                        : item.contact_en
                                                 "
                                             ></div>
                                         </div>
@@ -192,6 +203,7 @@ import ServeGridItem from "~/pages/serve/index-grid.vue";
 const route = useRoute();
 const config = useRuntimeConfig();
 const { apiBase } = config.public;
+const { t, locale } = useI18n();
 
 const item = ref(null);
 
@@ -207,7 +219,6 @@ item.value = res.value.data;
 useHead({
     title: item.value.name_th,
 });
-
 </script>
 
 <style scoped>

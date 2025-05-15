@@ -7,7 +7,7 @@
                         <client-only>
                             <v-select
                                 label="title"
-                                placeholder="หน่วยงาน"
+                                placeholder="department"
                                 :options="selectOptions.departments"
                                 v-model="search.department_id"
                                 class="v-select-no-border"
@@ -70,6 +70,8 @@ const perPage = ref(12);
 const currentPage = ref(1);
 const totalPage = ref(1);
 const totalItems = ref(0);
+const { t, locale } = useI18n();
+const localePath = useLocalePath();
 const search = ref({
     department_id: null,
     service_category_id: null,
@@ -94,7 +96,7 @@ const selectOptions = ref({
 const mapItemToProps = (it) => ({
     link: "department/",
     id: it.id,
-    title: it.name_th,
+    title: locale.value == "th" ? it.name_th : it.name_en,
     file: it.department_file,
 });
 
@@ -110,7 +112,7 @@ const { data: resDepartment } = await useAsyncData("Department", async () => {
 });
 
 selectOptions.value.departments = resDepartment.value.data.map((e) => {
-    return { title: e.name_th, value: e.id };
+    return { title: locale.value == "th" ? e.name_th : e.name_en, value: e.id };
 });
 
 if (route.query.page) {
@@ -145,10 +147,11 @@ totalItems.value = res.value.totalData;
 watch(
     [currentPage, search.value],
     () => {
-        router.replace({
-            name: "department",
-            query: { page: currentPage.value },
-        });
+        // console.log(currentPage.value);
+        // router.replace({
+        //     name: "department",
+        //     query: { page: currentPage.value },
+        // });
         refreshNuxtData("department");
     },
     { deep: true }

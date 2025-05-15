@@ -18,9 +18,9 @@
                     </div>
 
                     <h3 class="blog__title-10">
-                        <nuxt-link :to="item.link + item.id">{{
-                            item.title
-                        }}</nuxt-link>
+                        <nuxt-link :to="item.link + item.id">
+                            {{ item.title }}</nuxt-link
+                        >
                     </h3>
                 </div>
                 <div
@@ -33,7 +33,7 @@
                                 :to="item.link + item.id"
                                 class="text-color-primary text-uppercase"
                             >
-                                รายละเอียด
+                                {{ t("View Detail") }}
                                 <i class="fa fa-arrow-right news-link-view"></i>
                             </nuxt-link>
                         </div>
@@ -61,6 +61,10 @@ export default {
             type: Boolean,
             default: false,
         },
+    },
+    setup() {
+        const { t, locale } = useI18n();
+        return { t, locale };
     },
 };
 </script>
