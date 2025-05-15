@@ -2,7 +2,7 @@
     <div class="" v-if="items.length != 0">
         <div class="row">
             <div class="col-md-12">
-                <h4 class="text-color-primary">ข่าวประกาศ</h4>
+                <h4 class="text-color-primary">{{ t("Announcements") }}</h4>
                 <hr />
                 <table
                     class="table table-bordered table-striped table-news-document"
@@ -10,8 +10,8 @@
                     <thead>
                         <tr>
                             <th style="width: 10px" class="text-center">#</th>
-                            <th style="width: 70%">หัวข้อข่าวประกาศ</th>
-                            <th class="text-center">ดาวน์โหลด</th>
+                            <th style="width: 70%">{{ t("Title") }}</th>
+                            <th class="text-center">{{ t("Download") }}</th>
                         </tr>
                     </thead>
                     <tbody v-if="items.length != 0">
@@ -46,7 +46,7 @@
                     <NuxtLink
                         to="/annouce"
                         class="tp-btn-border-brown"
-                        >ข่าวประกาศทั้งหมด</NuxtLink
+                        >{{ t("ALL") }}</NuxtLink
                     >
                 </div>
             </div>
@@ -56,6 +56,7 @@
 
 <script setup>
 const runtimeConfig = useRuntimeConfig();
+const { t } = useI18n();
 
 const items = ref([]);
 

@@ -15,13 +15,17 @@
                                         path: '/',
                                     }"
                                 >
-                                    หน้าหลัก
+                                    {{ t("Home") }}
                                 </NuxtLink>
                             </span>
                             <span class="dvdr"
                                 ><i class="fa-solid fa-circle-small"></i
                             ></span>
-                            <span> {{ item.title }} </span>
+                            <span>
+                                {{
+                                    locale == "th" ? item.title : item.title_en
+                                }}
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -41,12 +45,18 @@
                                     class="col-sm-12 col-md-12 col-12"
                                     style="border-left: 0.7em solid #f60"
                                 >
-                                    <h2>{{ item.title }}</h2>
+                                    <h2>
+                                        {{
+                                            locale == "th"
+                                                ? item.title
+                                                : item.title_en
+                                        }}
+                                    </h2>
                                     <h2 style="color: #f60">
-                                        <span>อุทยานเทคโนโลยี </span>
+                                        <span>{{ t("TechnoPark") }}</span>
                                         <br />
                                         <span
-                                            >มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ</span
+                                            >{{ t("KMUTNB_FULLNAME") }}</span
                                         >
                                     </h2>
                                 </div>
@@ -62,7 +72,7 @@
                                                 v-html="
                                                     item.detail == null
                                                         ? ''
-                                                        : item.detail
+                                                        :  locale == 'th' ? item.detail : item.detail_en
                                                 "
                                             ></div>
                                         </div>
@@ -88,6 +98,8 @@ const item = ref(null);
 
 const config = useRuntimeConfig();
 const { apiBase } = config.public;
+
+const { t, locale } = useI18n();
 
 const { data: res } = await useAsyncData("contact", async () => {
     try {

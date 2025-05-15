@@ -8,13 +8,17 @@
                 menu.megaMenu ? 'has-mega-menu' : ''
             }`"
         >
-            <NuxtLink :to="menu.link">
-                {{ menu.title }}
+            <NuxtLink :to="$localePath(menu.link)">
+                {{ t(menu.title).toLocaleUpperCase() }}
             </NuxtLink>
             <ul v-if="menu.hasDropdown" class="submenu">
-                <li v-for="(sub, i) in menu.submenus" :key="i" style="border-bottom: 1px solid #eee;">
-                    <NuxtLink :to="sub.link">
-                        {{ sub.title }}
+                <li
+                    v-for="(sub, i) in menu.submenus"
+                    :key="i"
+                    style="border-bottom: 1px solid #eee"
+                >
+                    <NuxtLink :to="$localePath(sub.link)">
+                        {{ t(sub.title) }}
                     </NuxtLink>
                 </li>
             </ul>
@@ -38,11 +42,24 @@
 
 <script>
 import menuData from "~~/mixins/menuData";
-
 export default {
     mixins: [menuData],
+    setup() {
+        const { t } = useI18n();
+        return { t };
+    },
 };
 </script>
+
+<!-- <script setup>
+import { useI18n } from "vue-i18n";
+import { useLocalePath } from "#i18n";
+import menuData from "~~/mixins/menuData";
+console.log(menuData.data);
+const { t } = useI18n();
+const localePath = useLocalePath();
+console.log(t);
+</script> -->
 
 <style scoped>
 .main-menu-4 ul li a {

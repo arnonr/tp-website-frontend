@@ -13,30 +13,26 @@
                             >
                                 <div class="footer__widget-content">
                                     <div class="footer__info">
-                                        <h4>อุทยานเทคโนโลยี</h4>
-                                        <h4>
-                                            มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ
-                                        </h4>
+                                        <h4>{{ t("TechnoPark") }}</h4>
+                                        <h4>{{ t("KMUTNB_FULLNAME") }}</h4>
 
                                         <p style="font-size: 1em">
                                             <span>
-                                                1518 ถนนประชาราษฎร์ 1
-                                                แขวงวงศ์สว่าง
+                                                {{ t("Address1") }}
                                             </span>
                                             <br />
-                                            <span
-                                                >เขตบางซื่อ กรุงเทพมหานคร
-                                                10800</span
-                                            >
+                                            <span> {{ t("Address2") }}</span>
                                         </p>
 
                                         <p style="font-size: 1em">
                                             <span>
-                                                โทรศัพท์ : {{ contact_phone }}
+                                                {{ t("Phone") }} :
+                                                {{ contact_phone }}
                                             </span>
                                             <br />
                                             <span
-                                                >อีเมล : {{ contact_email }}</span
+                                                >{{ t("Email") }} :
+                                                {{ contact_email }}</span
                                             >
                                             <br />
                                             <br />
@@ -74,8 +70,8 @@
                                         <div
                                             class="pl-10 pr-10 mt-1 d-inline-block bg-theme-primary footer-label"
                                         >
-                                            อุทยานเทคโนโลยี
-                                            มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ
+                                            {{ t("TechnoPark") }}
+                                            {{ t("KMUTNB_FULLNAME") }}
                                         </div>
                                         <!-- <div class="mt-20">
                                             <nuxt-link href="/login"
@@ -103,7 +99,6 @@
                             >
                                 <div class="footer__widget-content">
                                     <div class="footer__info">
-
                                         <iframe
                                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3874.25103509604!2d100.50773527995139!3d13.823958961026323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29b9fec733295%3A0xabfe9c6fbd6d88d7!2zS01VVE5CIFRFQ0hOTyBQQVJLIOC4reC4uOC4l-C4ouC4suC4meC5gOC4l-C4hOC5guC4meC5guC4peC4ouC4tSDguKHguKvguLLguKfguLTguJfguKLguLLguKXguLHguKLguYDguJfguITguYLguJnguYLguKXguKLguLXguJ7guKPguLDguIjguK3guKHguYDguIHguKXguYnguLLguJ7guKPguLDguJnguITguKPguYDguKvguJnguLfguK0!5e0!3m2!1sen!2sth!4v1723620243600!5m2!1sen!2sth"
                                             width="100%"
@@ -126,9 +121,9 @@
                         <div class="col-sm-12 text-center">
                             <div class="footer__copyright-5">
                                 <p>
-                                    © {{ new Date().getFullYear() + 543 }}
-                                    อุทยานเทคโนโลยี
-                                    มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ
+                                    © {{ year }}
+                                    {{ t("TechnoPark") }}
+                                    {{ t("KMUTNB_FULLNAME") }}
                                 </p>
                             </div>
                         </div>
@@ -153,10 +148,13 @@ export default {
         const config = useRuntimeConfig();
         const { contact_phone, contact_email } = config.public;
 
-        return {
-            contact_phone,
-            contact_email,
-        };
+        const { t, locale } = useI18n();
+        const year = ref(new Date().getFullYear());
+        if (locale == "th") {
+            year.value = new Date().getFullYear() + 543;
+        }
+
+        return { t, contact_phone, contact_email, year };
     },
 };
 </script>

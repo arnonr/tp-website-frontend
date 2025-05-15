@@ -29,7 +29,7 @@
                         <NuxtLink
                             to="/serve"
                             class="tp-btn-border-brown text-uppercase"
-                            >{{ "งานบริการวิชาการทั้งหมด" }}</NuxtLink
+                            >{{ t("ALL") }}</NuxtLink
                         >
                     </div>
                 </div>
@@ -44,6 +44,7 @@ import NewsGridItem from "~/components/list/GridItem.vue";
 const runtimeConfig = useRuntimeConfig();
 
 const items = ref([]);
+const { t } = useI18n();
 
 const search = ref({
     is_publish: 1,

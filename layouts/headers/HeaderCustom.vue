@@ -22,12 +22,12 @@
                                         <h4
                                             class="d-none d-xl-block d-lg-block text-color-secondary"
                                         >
-                                            อุทยานเทคโนโลยี
+                                            {{ t("TechnoPark") }}
                                         </h4>
                                         <h6
                                             class="d-none d-xl-block d-lg-block text-color-secondary"
                                         >
-                                            มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ
+                                            {{ t("KMUTNB_FULLNAME") }}
                                         </h6>
                                     </div>
                                 </NuxtLink>
@@ -80,6 +80,23 @@
                                             @close="closeModal"
                                             @search="handleSearch"
                                         />
+                                        <span class="mr-5 ml-5"> | </span>
+                                        <span class="ml-5 mr-5 d-inline-block">
+                                            <client-only>
+                                                <!-- language select with flag with vue select -->
+                                                <v-select
+                                                    label="name"
+                                                    :options="
+                                                        selectOptions.languages
+                                                    "
+                                                    id="language-select"
+                                                    v-model="selectedLanguage"
+                                                    class="v-select-no-border"
+                                                    style="width: 106px"
+                                                    :clearable="false"
+                                                ></v-select>
+                                            </client-only>
+                                        </span>
                                     </span>
 
                                     <!-- hamburgur menu Mobile-->
@@ -194,14 +211,42 @@ import OffCanvasCustom from "~~/components/common/off-canvas/OffCanvasCustom.vue
 import TranslateWidget from "~~/components/translate/GoogleTranslateWidget.vue";
 import SearchModal from "~~/components/search/SearchModal.vue";
 import { storeToRefs } from "pinia"; // import storeToRefs helper hook from pinia
+
+import vSelect from "vue-select";
+import "vue-select/dist/vue-select.css";
 // import { useAuthStore } from "~/store/auth"; // import the auth store we just created
 // const { authenticated } = storeToRefs(useAuthStore()); // make authenticated state reactive with storeToRefs
 // const { logUserOut } = useAuthStore();
 
-// const router = useRouter();
-
 export default {
-    components: { menus, OffCanvasCustom, TranslateWidget },
+    components: { menus, OffCanvasCustom, TranslateWidget, vSelect },
+    setup() {
+        const { locales, locale, setLocale, t } = useI18n();
+        const selectOptions = ref({
+            languages: locales.value.map((locale) => ({
+                code: locale.code,
+                name: locale.name,
+            })),
+        });
+        const selectedLanguage = ref({
+            code: locale.value,
+            // th en cn
+            name:
+                locale.value === "th"
+                    ? "ไทย"
+                    : locale.value === "en"
+                    ? "English"
+                    : "Chinese",
+        });
+        const changeLanguage = (newVal) => {
+            setLocale(newVal.code);
+        };
+
+        watch(selectedLanguage, (newVal) => {
+            changeLanguage(newVal);
+        });
+        return { t, selectedLanguage, selectOptions };
+    },
     data() {
         return {
             isSticky: false,

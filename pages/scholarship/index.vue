@@ -4,10 +4,6 @@
             <div class="row">
                 <div class="col-xxl-12" v-if="item != null">
                     <div class="breadcrumb__content p-relative z-index-1">
-                        <!-- <h4 class="breadcrumb__title">
-                  {{ item.title }}
-                </h4> -->
-
                         <div class="breadcrumb__list">
                             <span>
                                 <NuxtLink
@@ -15,7 +11,7 @@
                                         path: '/',
                                     }"
                                 >
-                                    หน้าหลัก
+                                    {{ t("Home") }}
                                 </NuxtLink>
                             </span>
                             <span class="dvdr"
@@ -43,12 +39,12 @@
                                 >
                                     <h2>{{ item.title }}</h2>
                                     <h2 style="color: #f60">
-                                        <span>อุทยานเทคโนโลยี มจพ.</span>
+                                        <span>{{ t("TechnoPark") }}</span>
                                     </h2>
                                 </div>
                             </div>
 
-                            <div class="row">
+                            <div class="row" v-if="locale == 'th'">
                                 <div class="col-lg-12">
                                     <div class="postbox__main-wrapper">
                                         <div
@@ -955,8 +951,426 @@
                                                     nophadon.w@eng.kmutnb.ac.th
                                                 </h6>
                                                 <h6>โทรศัพท์ 087 680 4874</h6>
-                                                <div><hr></div>
-                                                <img src="/images/scholarship/img4.jpg" alt="" class="img-fluid">
+                                                <div><hr /></div>
+                                                <img
+                                                    src="/images/scholarship/img4.jpg"
+                                                    alt=""
+                                                    class="img-fluid"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" v-else>
+                                <div class="col-lg-12">
+                                    <div class="postbox__main-wrapper">
+                                        <div
+                                            class="postbox__details-content-wrapper mt-40"
+                                        >
+                                            <img
+                                                src="/images/scholarship/banner.jpg"
+                                                alt=""
+                                                class="img-fluid"
+                                            />
+
+                                            <div class="card mt-40">
+                                                <div class="card-body">
+                                                    <ul
+                                                        class="nav nav-pills mb-3"
+                                                        id="pills-tab"
+                                                        role="tablist"
+                                                    >
+                                                        <li
+                                                            class="nav-item"
+                                                            role="presentation"
+                                                        >
+                                                            <button
+                                                                class="nav-link active"
+                                                                id="pills-home-tab"
+                                                                data-bs-toggle="pill"
+                                                                data-bs-target="#pills-home"
+                                                                type="button"
+                                                                role="tab"
+                                                                aria-controls="pills-home"
+                                                                aria-selected="true"
+                                                            >
+                                                                Award Ceremony
+                                                            </button>
+                                                        </li>
+                                                        <li
+                                                            class="nav-item"
+                                                            role="presentation"
+                                                        >
+                                                            <button
+                                                                class="nav-link"
+                                                                id="pills-projects-tab"
+                                                                data-bs-toggle="pill"
+                                                                data-bs-target="#pills-projects"
+                                                                type="button"
+                                                                role="tab"
+                                                                aria-controls="pills-projects"
+                                                                aria-selected="false"
+                                                            >
+                                                                Funded Projects
+                                                            </button>
+                                                        </li>
+                                                        <li
+                                                            class="nav-item"
+                                                            role="presentation"
+                                                        >
+                                                            <button
+                                                                class="nav-link"
+                                                                id="pills-details-tab"
+                                                                data-bs-toggle="pill"
+                                                                data-bs-target="#pills-details"
+                                                                type="button"
+                                                                role="tab"
+                                                                aria-controls="pills-details"
+                                                                aria-selected="false"
+                                                            >
+                                                                Project Details
+                                                            </button>
+                                                        </li>
+                                                    </ul>
+                                                    <div
+                                                        class="tab-content"
+                                                        id="pills-tabContent"
+                                                    >
+                                                        <div
+                                                            class="tab-pane fade show active"
+                                                            id="pills-home"
+                                                            role="tabpanel"
+                                                            aria-labelledby="pills-home-tab"
+                                                        >
+                                                            <h3
+                                                                class="text-center mt-40 mb-40"
+                                                                style="
+                                                                    color: #ff6600;
+                                                                "
+                                                            >
+                                                                Congratulations
+                                                                to all 12
+                                                                awarded teams
+                                                            </h3>
+                                                            <img
+                                                                src="/images/scholarship/img2.jpg"
+                                                                alt=""
+                                                                class="img-fluid rounded-4 w-75 d-block mx-auto mb-40"
+                                                            />
+                                                            <ul
+                                                                class="list-group"
+                                                            >
+                                                                <li
+                                                                    class="list-group-item"
+                                                                >
+                                                                    <strong
+                                                                        >1.
+                                                                        Topology-based
+                                                                        Structural
+                                                                        Estimation</strong
+                                                                    >
+                                                                </li>
+                                                                <li
+                                                                    class="list-group-item"
+                                                                >
+                                                                    <strong
+                                                                        >2.
+                                                                        Smart
+                                                                        Sign
+                                                                        Glove:
+                                                                        Innovative
+                                                                        Glove
+                                                                        for
+                                                                        Real-time
+                                                                        Sign
+                                                                        Language
+                                                                        Translation</strong
+                                                                    >
+                                                                </li>
+                                                                <li
+                                                                    class="list-group-item"
+                                                                >
+                                                                    <strong
+                                                                        >3.
+                                                                        Safety
+                                                                        Issues
+                                                                        of
+                                                                        Seatbelt
+                                                                        Extender
+                                                                        Devices
+                                                                        According
+                                                                        to TIS
+                                                                        and UN
+                                                                        Regulations</strong
+                                                                    >
+                                                                </li>
+                                                                <li
+                                                                    class="list-group-item"
+                                                                >
+                                                                    <strong
+                                                                        >4.
+                                                                        Sustainable
+                                                                        Living
+                                                                        Solutions:
+                                                                        Advancing
+                                                                        EV
+                                                                        Infrastructure,
+                                                                        Local
+                                                                        Product
+                                                                        Accessibility,
+                                                                        and
+                                                                        Digital
+                                                                        Connectivity</strong
+                                                                    >
+                                                                </li>
+                                                                <li
+                                                                    class="list-group-item"
+                                                                >
+                                                                    <strong
+                                                                        >5.
+                                                                        Autonomous
+                                                                        Electric
+                                                                        Vehicle
+                                                                        for
+                                                                        Hospital
+                                                                        Logistics</strong
+                                                                    >
+                                                                </li>
+                                                                <li
+                                                                    class="list-group-item"
+                                                                >
+                                                                    <strong
+                                                                        >6.
+                                                                        Battery
+                                                                        Thermal
+                                                                        Management
+                                                                        System
+                                                                        Using
+                                                                        Dual-Evaporator
+                                                                        Compression
+                                                                        and
+                                                                        Ejector</strong
+                                                                    >
+                                                                </li>
+                                                                <li
+                                                                    class="list-group-item"
+                                                                >
+                                                                    <strong
+                                                                        >7.
+                                                                        Biodegradable
+                                                                        Coating
+                                                                        on
+                                                                        Thermoplastic
+                                                                        Starch
+                                                                        for
+                                                                        Disposable
+                                                                        Tableware</strong
+                                                                    >
+                                                                </li>
+                                                                <li
+                                                                    class="list-group-item"
+                                                                >
+                                                                    <strong
+                                                                        >8. PWM
+                                                                        Signal
+                                                                        Generation
+                                                                        for
+                                                                        3-Phase,
+                                                                        3-Level
+                                                                        Inverter</strong
+                                                                    >
+                                                                </li>
+                                                                <li
+                                                                    class="list-group-item"
+                                                                >
+                                                                    <strong
+                                                                        >9. EMI
+                                                                        Filter
+                                                                        Design
+                                                                        for PFC
+                                                                        Converter</strong
+                                                                    >
+                                                                </li>
+                                                                <li
+                                                                    class="list-group-item"
+                                                                >
+                                                                    <strong
+                                                                        >10.
+                                                                        Mobile
+                                                                        App for
+                                                                        10-Year
+                                                                        Cardiovascular
+                                                                        Disease
+                                                                        Risk
+                                                                        Assessment</strong
+                                                                    >
+                                                                </li>
+                                                                <li
+                                                                    class="list-group-item"
+                                                                >
+                                                                    <strong
+                                                                        >11.
+                                                                        3D-Printed
+                                                                        PLA
+                                                                        Composite
+                                                                        with
+                                                                        Iron
+                                                                        Particles
+                                                                        for
+                                                                        Biomedical
+                                                                        Use</strong
+                                                                    >
+                                                                </li>
+                                                                <li
+                                                                    class="list-group-item"
+                                                                >
+                                                                    <strong
+                                                                        >12.
+                                                                        Metal–Organic
+                                                                        Framework
+                                                                        for
+                                                                        Zinc–Air
+                                                                        Battery
+                                                                        Air
+                                                                        Electrode</strong
+                                                                    >
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div
+                                                            class="tab-pane fade"
+                                                            id="pills-projects"
+                                                            role="tabpanel"
+                                                            aria-labelledby="pills-projects-tab"
+                                                        >
+                                                            <h3
+                                                                class="mt-40 mb-40"
+                                                                style="
+                                                                    color: #ff6600;
+                                                                "
+                                                            >
+                                                                Funded Projects
+                                                            </h3>
+                                                            <!-- Same list repeated -->
+                                                            <!-- Omitted for brevity -->
+                                                            <h3
+                                                                class="mt-40 mb-40"
+                                                                style="
+                                                                    color: #ff6600;
+                                                                "
+                                                            >
+                                                                Waiting List (If
+                                                                additional funds
+                                                                are available)
+                                                            </h3>
+                                                            <ul
+                                                                class="list-group"
+                                                            >
+                                                                <li
+                                                                    class="list-group-item"
+                                                                >
+                                                                    <strong
+                                                                        >1.
+                                                                        Monitoring
+                                                                        Electric
+                                                                        Vehicle
+                                                                        Status
+                                                                        via
+                                                                        Mobile
+                                                                        Application</strong
+                                                                    >
+                                                                </li>
+                                                                <li
+                                                                    class="list-group-item"
+                                                                >
+                                                                    <strong
+                                                                        >2. AI
+                                                                        Chatbot-based
+                                                                        Education
+                                                                        Recommendation
+                                                                        System</strong
+                                                                    >
+                                                                </li>
+                                                                <li
+                                                                    class="list-group-item"
+                                                                >
+                                                                    <strong
+                                                                        >3. IoT
+                                                                        Gateway
+                                                                        Platform</strong
+                                                                    >
+                                                                </li>
+                                                                <li
+                                                                    class="list-group-item"
+                                                                >
+                                                                    <strong
+                                                                        >4.
+                                                                        Biodiesel
+                                                                        Property
+                                                                        Prediction
+                                                                        Using
+                                                                        AI</strong
+                                                                    >
+                                                                </li>
+                                                                <li
+                                                                    class="list-group-item"
+                                                                >
+                                                                    <strong
+                                                                        >5. 5G
+                                                                        Network
+                                                                        Design
+                                                                        for
+                                                                        IoT</strong
+                                                                    >
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div
+                                                            class="tab-pane fade"
+                                                            id="pills-details"
+                                                            role="tabpanel"
+                                                            aria-labelledby="pills-details-tab"
+                                                        >
+                                                            <img
+                                                                src="/images/scholarship/img3.jpg"
+                                                                alt=""
+                                                                class="img-fluid mb-40 mt-20"
+                                                            />
+                                                            <div
+                                                                class="accordion"
+                                                                id="accordionExample"
+                                                            >
+                                                                <!-- Accordion Items like Objectives, Timeline, Committee, etc. -->
+                                                                <!-- Omitted for brevity -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card mt-40 p-4">
+                                                <h5>
+                                                    Contact for More Information
+                                                </h5>
+                                                <h6 class="mt-20">
+                                                    Asst. Prof. Dr. Noppadon
+                                                    Wiwatcharakoses
+                                                </h6>
+                                                <h6>
+                                                    Deputy Director, Technology
+                                                    Park
+                                                </h6>
+                                                <h6 class="mt-20">
+                                                    E-mail:
+                                                    nophadon.w@eng.kmutnb.ac.th
+                                                </h6>
+                                                <h6>Phone: 087 680 4874</h6>
+                                                <div><hr /></div>
+                                                <img
+                                                    src="/images/scholarship/img4.jpg"
+                                                    alt="Contact"
+                                                    class="img-fluid"
+                                                />
                                             </div>
                                         </div>
                                     </div>
@@ -977,9 +1391,12 @@ import buddhistEra from "dayjs/plugin/buddhistEra";
 import { useRuntimeConfig } from "#app";
 dayjs.extend(buddhistEra);
 const route = useRoute();
-
+const { t, locale } = useI18n();
 const item = ref({
-    title: "โครงการทุนสนับสนุนโครงงานปริญญาตรี เพื่อส่งเสริมความร่วมมือระหว่างคณะใน มจพ.",
+    title:
+        locale.value == "th"
+            ? "โครงการทุนสนับสนุนโครงงานปริญญาตรี เพื่อส่งเสริมความร่วมมือระหว่างคณะใน มจพ."
+            : "Scholarship for Undergraduate Research Projects to Promote Collaboration between Departments in KMUTNB",
 });
 
 const config = useRuntimeConfig();

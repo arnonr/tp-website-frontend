@@ -2,7 +2,7 @@
     <div class="">
         <div class="row">
             <div class="col-md-12">
-                <h4 class="text-custom-primary">วิดีโอเกี่ยวกับ อุทยานฯ</h4>
+                <h4 class="text-custom-primary">{{ t("Video") }}</h4>
                 <hr />
                 <div class="row" v-if="items.length != 0">
                     <div class="col-md-12 mb-2">
@@ -67,9 +67,9 @@
         <div class="div-btn-annouce mt-15">
             <div class="col">
                 <div class="tp-button-demo text-end">
-                    <NuxtLink to="/video" class="tp-btn-border-brown"
-                        >วิดีโอทั้งหมด</NuxtLink
-                    >
+                    <NuxtLink to="/video" class="tp-btn-border-brown">{{
+                        t("ALL")
+                    }}</NuxtLink>
                 </div>
             </div>
         </div>
@@ -86,6 +86,8 @@
 import VideoModal from "~/components/common/modals/VideoModal.vue";
 
 const runtimeConfig = useRuntimeConfig();
+
+const { t } = useI18n();
 
 const video_modal = ref(null);
 const videoUrl = ref(null);

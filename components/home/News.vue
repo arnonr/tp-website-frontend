@@ -48,7 +48,7 @@
                         <NuxtLink
                             to="/news"
                             class="tp-btn-border-brown text-uppercase"
-                            >{{ "ข่าวทั้งหมด" }}</NuxtLink
+                            >{{ t("All News") }}</NuxtLink
                         >
                     </div>
                 </div>
@@ -65,6 +65,7 @@ const runtimeConfig = useRuntimeConfig();
 const items = ref([]);
 const newsType = ref([]);
 const activeCategory = ref("news-all");
+const { t } = useI18n();
 
 const search = ref({
     news_type_id: undefined,
@@ -87,7 +88,7 @@ const { data: resNewsType } = await useAsyncData("newsType", async () => {
 
     d.unshift({
         id: null,
-        name: "ข่าวทั้งหมด",
+        name: t("All News"),
         category: "news-all",
     });
 

@@ -26,7 +26,25 @@ export default defineNuxtConfig({
                 ],
             },
         ],
+        "@nuxtjs/i18n",
     ],
+    i18n: {
+        locales: [
+            { code: "th", file: "th.json", name: "ไทย" },
+            { code: "en", file: "en.json", name: "English" },
+            { code: "cn", file: "cn.json", name: "Chinese" },
+        ],
+        defaultLocale: "th",
+        lazy: true,
+        strategy: "prefix_except_default", //
+        detectBrowserLanguage: {
+            useCookie: true,
+            cookieKey: "i18n_redirected",
+            alwaysRedirect: false,
+            fallbackLocale: "th",
+            redirectOn: "root",
+        },
+    },
     plugins: [
         { src: "~/plugins/toastify.js" },
         { src: "~/plugins/froala-editor.client.js", mode: "client" },

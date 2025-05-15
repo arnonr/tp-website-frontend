@@ -3,14 +3,14 @@
     <div class="container" v-if="items.length != 0">
       <div class="row">
         <div class="col-md-12">
-          <h4 class="text-custom-primary">ข่าวประกาศ</h4>
+          <h4 class="text-custom-primary">{{ t("Announcements") }}</h4>
           <hr />
           <table class="table table-bordered table-striped table-news-document">
             <thead>
               <tr>
                 <th style="width: 10px" class="text-center">#</th>
-                <th style="width: 70%">หัวข้อข่าวประกาศ</th>
-                <th class="text-center">ดาวน์โหลด</th>
+                <th style="width: 70%">{{ t("Title") }}</th>
+                <th class="text-center">{{ t("Download") }}</th>
               </tr>
             </thead>
             <tbody v-if="items.length != 0">
@@ -53,6 +53,7 @@ import BlogPagination from "~/components/common/pagination/BlogPagination.vue";
 const runtimeConfig = useRuntimeConfig();
 const router = useRouter();
 const route = useRoute();
+const { t } = useI18n();
 
 // Variable
 const items = ref([]);
