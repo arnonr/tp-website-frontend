@@ -37,13 +37,15 @@ export default defineNuxtConfig({
         defaultLocale: "th",
         lazy: true,
         strategy: "prefix_except_default", //
-        detectBrowserLanguage: {
-            useCookie: true,
-            cookieKey: "i18n_redirected",
-            alwaysRedirect: false,
-            fallbackLocale: "th",
-            redirectOn: "root",
-        },
+
+        detectBrowserLanguage: false,
+        // detectBrowserLanguage: {
+        //     useCookie: true,
+        //     cookieKey: "i18n_redirected",
+        //     alwaysRedirect: true,
+        //     fallbackLocale: "th",
+        //     redirectOn: "root",
+        // },
     },
     plugins: [
         { src: "~/plugins/toastify.js" },

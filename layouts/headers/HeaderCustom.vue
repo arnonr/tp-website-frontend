@@ -228,9 +228,9 @@ export default {
                 name: locale.name,
             })),
         });
+        console.log(locale.value);
         const selectedLanguage = ref({
             code: locale.value,
-            // th en cn
             name:
                 locale.value === "th"
                     ? "ไทย"
