@@ -39,10 +39,7 @@
                                         >
                                             <div class="text-end">
                                                 <NuxtLink
-                                                    :to="{
-                                                        name: 'admin-news-edit-id',
-                                                        params: { id: item.id },
-                                                    }"
+                                                    :to="`/admin/news/edit/${it.id}`"
                                                     class="btn btn-warning"
                                                     >แก้ไขข้อมูล</NuxtLink
                                                 >

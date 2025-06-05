@@ -166,10 +166,7 @@
                                             style="min-width: 8rem"
                                         >
                                             <NuxtLink
-                                                :to="{
-                                                    name: 'admin-news-id',
-                                                    params: { id: it.id },
-                                                }"
+                                                :to="`/admin/news/edit/${it.id}`"
                                                 class="btn btn-warning text-uppercase"
                                             >
                                                 <i

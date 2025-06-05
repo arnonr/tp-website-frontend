@@ -121,10 +121,7 @@
                                         </th>
                                         <td class="text-center">
                                             <NuxtLink
-                                                :to="{
-                                                    name: 'admin-department-edit-id',
-                                                    params: { id: it.id },
-                                                }"
+                                                 :to="`/admin/department/edit/${it.id}`"
                                                 class="btn btn-warning text-uppercase ml-5"
                                             >
                                                 <i
