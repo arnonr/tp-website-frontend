@@ -203,7 +203,7 @@ watch(
     [currentPage, search],
     () => {
         router.replace({
-            name: "news",
+            path: "/news",
             query: { page: currentPage.value },
         });
         refreshNuxtData("news");
@@ -222,9 +222,10 @@ useHead({
     title: "ข่าวและประกาศ งานบริการวิชาการ มจพ.",
 });
 
-// definePageMeta({
-//   middleware: "auth",
-// });
+definePageMeta({
+    name: "news",
+    //   middleware: "auth",
+});
 </script>
 
 <style scoped></style>
