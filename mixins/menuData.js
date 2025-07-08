@@ -76,6 +76,10 @@ export default {
                             title: "All Academic Services",
                             link: "/serve",
                         },
+                        {
+                            title: "Downloadable Documents",
+                            link: "/about/91",
+                        },
                     ],
                 },
                 {
