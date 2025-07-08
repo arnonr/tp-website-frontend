@@ -197,6 +197,13 @@
                                                 งานบริการวิชาการทั้งหมด</nuxt-link
                                             >
                                         </li>
+                                        <li>
+                                            <nuxt-link
+                                                to="/about/91"
+                                                @click="closeOffcanvas"
+                                                >- เอกสารดาวน์โหลด</nuxt-link
+                                            >
+                                        </li>
                                     </ul>
                                 </li>
                                 <hr />
