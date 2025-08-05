@@ -160,10 +160,9 @@
                                         <hr style="margin: 0.4rem 0" />
                                         <li>
                                             <nuxt-link
-                                                to="https://technopark.kmutnb.ac.th/coopday/"
+                                                to="https://cwieday.technopark.kmutnb.ac.th/"
                                                 @click="closeOffcanvas"
-                                                >- ประกวดผลงาน CWIE</nuxt-link
-                                            >
+                                                >- ประกวดผลงาน CWIE</nuxt-link>
                                         </li>
                                     </ul>
                                 </li>

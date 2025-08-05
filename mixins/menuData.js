@@ -50,7 +50,7 @@ export default {
                         },
                         {
                             title: "CWIE Project Contest",
-                            link: "https://technopark.kmutnb.ac.th/coopday/",
+                            link: "https://cwieday.technopark.kmutnb.ac.th",
                         },
                         {
                             // ประชาสัมพันธ์ตำแหน่งงาน
