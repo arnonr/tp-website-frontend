@@ -41,7 +41,7 @@ const icons = ref([
     id: 2,
     name: "Sustainable",
     icon_file: "/images/iconwebtechnopark/icon_green.png",
-    url: "/article/1",
+    url: "/sdg",
   },
   {
     id: 3,

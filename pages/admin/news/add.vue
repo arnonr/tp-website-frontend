@@ -97,6 +97,25 @@
 
                             <div class="form-group mt-10">
                                 <label for="" class="label label-required"
+                                    >SDG :
+                                </label>
+                                <div>
+                                    <client-only>
+                                        <v-select
+                                            label="title"
+                                            placeholder="SDG"
+                                            :options="selectOptions.sdgs"
+                                            v-model="item.sdg_id"
+                                            multiple
+                                            class="v-select-no-border"
+                                            :clearable="true"
+                                        ></v-select>
+                                    </client-only>
+                                </div>
+                            </div>
+
+                            <div class="form-group mt-10">
+                                <label for="" class="label label-required"
                                     >รูปภาพปก 500x350 :
                                 </label>
                                 <div>
@@ -272,6 +291,7 @@ const selectOptions = ref({
     news_types: [],
     departments: [],
     service_categories: [],
+    sdgs: [],
 });
 
 const format = (date) => {
@@ -399,6 +419,21 @@ const fetchServiceCategories = async () => {
     });
 };
 
+const fetchSdgs = async () => {
+    let data = await $fetch(`${apiBase}/sdg`, {
+        params: {
+            is_publish: 1,
+            perPage: 100,
+        },
+    }).catch((error) => error.data);
+
+    console.log(data.data);
+
+    selectOptions.value.sdgs = data.data.map((e) => {
+        return { title: e.title_th, value: e.id };
+    });
+};
+
 // Event
 const onSubmit = async () => {
     if (
@@ -430,6 +465,13 @@ const onSubmit = async () => {
         });
     }
 
+    let sdg_id_arr = [];
+    if (item.value.sdg_id.length != 0) {
+        item.value.sdg_id.forEach((el) => {
+            sdg_id_arr.push(el.value);
+        });
+    }
+
     let data = {
         ...item.value,
         secret_key: r,
@@ -446,6 +488,10 @@ const onSubmit = async () => {
             item.value.service_category_id == null
                 ? undefined
                 : service_category_id_arr,
+        sdg_id:
+            item.value.sdg_id == null
+                ? undefined
+                : sdg_id_arr,
         created_news: dayjs().format("YYYY-MM-DD"),
         is_publish: item.value.is_publish.value,
     };
@@ -480,6 +526,7 @@ onMounted(() => {
         fetchNewsTypes();
         fetchDepartments();
         fetchServiceCategories();
+        fetchSdgs();
     }
 });
 

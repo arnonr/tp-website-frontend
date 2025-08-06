@@ -95,6 +95,25 @@
                             </div>
 
                             <div class="form-group mt-10">
+                                <label for="" class="label label-required"
+                                    >SDG :
+                                </label>
+                                <div>
+                                    <client-only>
+                                        <v-select
+                                            label="title"
+                                            placeholder="SDG"
+                                            :options="selectOptions.sdgs"
+                                            v-model="item.sdg_id"
+                                            multiple
+                                            class="v-select-no-border"
+                                            :clearable="true"
+                                        ></v-select>
+                                    </client-only>
+                                </div>
+                            </div>
+
+                            <div class="form-group mt-10">
                                 <div class="row">
                                     <label
                                         for="col-sm-12"
@@ -280,6 +299,7 @@ const selectOptions = ref({
     news_types: [],
     departments: [],
     service_categories: [],
+    sdgs: [],
 });
 
 const format = (date) => {
@@ -409,6 +429,23 @@ const fetchServiceCategories = async () => {
     });
 };
 
+const fetchSdgs = async () => {
+    let data = await $fetch(`${apiBase}/sdg`, {
+        params: {
+            is_publish: 1,
+            perPage: 100,
+        },
+    }).catch((error) => error.data);
+
+
+    selectOptions.value.sdgs = data.data.map((e) => {
+        return { title: e.title_th, value: e.id };
+    });
+    console.log(selectOptions.value.sdgs);
+
+
+};
+
 const { data: res } = await useFetch(`${apiBase}/news/${route.params.id}`, {
     server: true,
 });
@@ -431,6 +468,12 @@ let test = res.value.data.service_categories.map((x) => {
     return { value: x.service_category.id, title: x.service_category.name_th };
 });
 item.value.service_category_id = test;
+
+let test2 = res.value.data.sdg_on_news.map((x) => {
+    return { value: x.sdg.id, title: x.sdg.title_th };
+});
+console.log(test2);
+item.value.sdg_id = test2;
 
 initFroala();
 
@@ -507,6 +550,13 @@ const onSubmit = async () => {
         });
     }
 
+    let sdg_id_arr = [];
+    if (item.value.sdg_id.length != 0) {
+        item.value.sdg_id.forEach((el) => {
+            sdg_id_arr.push(el.value);
+        });
+    }
+
     let data = {
         ...item.value,
         news_file: file.value.files != null ? file.value.files[0] : null,
@@ -522,6 +572,10 @@ const onSubmit = async () => {
             item.value.service_category_id == null
                 ? undefined
                 : service_category_id_arr,
+        sdg_id:
+            item.value.sdg_id == null
+                ? undefined
+                : sdg_id_arr,
         created_news: dayjs().format("YYYY-MM-DD"),
         is_publish: item.value.is_publish.value,
     };
@@ -557,6 +611,7 @@ onMounted(async () => {
         await fetchNewsTypes();
         await fetchDepartments();
         await fetchServiceCategories();
+        await fetchSdgs();
         await fetchGallery();
 
         item.value.is_publish = selectOptions.value.publishes.find((x) => {

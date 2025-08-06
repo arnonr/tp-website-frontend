@@ -39,7 +39,7 @@
                                         >
                                             <div class="text-end">
                                                 <NuxtLink
-                                                    :to="`/admin/news/edit/${it.id}`"
+                                                    :to="`/admin/news/edit/${item.id}`"
                                                     class="btn btn-warning"
                                                     >แก้ไขข้อมูล</NuxtLink
                                                 >
@@ -101,6 +101,24 @@
                                                         >{{
                                                             sc.service_category
                                                                 .name_th + ", "
+                                                        }}</span
+                                                    >
+                                                    <hr />
+                                                </div>
+
+                                                <div class="col-12">
+                                                    <span class="fw-bold"
+                                                        >SDG
+                                                        :
+                                                    </span>
+                                                    <span
+                                                        v-for="(
+                                                            sc, idx
+                                                        ) in item.sdg_on_news"
+                                                        :key="idx"
+                                                        >{{
+                                                            sc.sdg
+                                                                .title_th + ", "
                                                         }}</span
                                                     >
                                                     <hr />
