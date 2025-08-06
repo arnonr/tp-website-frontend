@@ -434,6 +434,7 @@ const fetchSdgs = async () => {
         params: {
             is_publish: 1,
             perPage: 100,
+            orderBy: "id",
         },
     }).catch((error) => error.data);
 
