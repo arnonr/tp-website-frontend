@@ -493,7 +493,7 @@ const onSubmit = async () => {
             item.value.sdg_id == null
                 ? undefined
                 : sdg_id_arr,
-        created_news: dayjs().format("YYYY-MM-DD"),
+        created_news: item.value.created_news ? dayjs(item.value.created_news).format("YYYY-MM-DD") : dayjs().format("YYYY-MM-DD"),
         is_publish: item.value.is_publish.value,
     };
 
