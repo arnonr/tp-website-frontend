@@ -279,7 +279,7 @@ useHead({
 });
 
 definePageMeta({
-    name: "news",
+    name: "sdg",
     //   middleware: "auth",
 });
 </script>
