@@ -76,9 +76,7 @@
                                         <div
                                             class="row"
                                             v-if="
-                                                dp.id != 1 &&
-                                                dp.id != 3 &&
-                                                dp.id != 4
+                                                dp.id != 1
                                             "
                                         >
                                             <div
@@ -171,7 +169,7 @@
                                             </div>
                                         </div>
                                         <!-- อำนวยการ -->
-                                        <div class="row" v-if="dp.id == 3">
+                                        <!-- <div class="row" v-if="dp.id == 3">
                                             <div
                                                 class="mt-40"
                                                 style="margin-top: 40px"
@@ -616,9 +614,9 @@
                                                     </div>
                                                 </div>
                                             </template>
-                                        </div>
+                                        </div> -->
                                         <!-- บริการวิชาการ -->
-                                        <div class="row" v-if="dp.id == 4">
+                                        <!-- <div class="row" v-if="dp.id == 4">
                                             <div
                                                 class="mt-40"
                                                 style="margin-top: 40px"
@@ -1061,7 +1059,7 @@
                                                     </div>
                                                 </div>
                                             </template>
-                                        </div>
+                                        </div> -->
                                         <!-- ผู้บริหาร dp.id == 1 -->
                                         <div
                                             class="row"
