@@ -65,7 +65,7 @@ const icons = ref([
     id: 6,
     name: "Intellectual Property",
     icon_file: "/images/iconwebtechnopark/icon_intellectual.png",
-    url: "/intellectual/1",
+    url: "https://ip.kmutnb.ac.th/",
   },
 ]);
 </script>
