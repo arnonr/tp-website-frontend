@@ -28,7 +28,7 @@ const icons = ref([
     id: 1,
     name: "Booking",
     icon_file: "/images/iconwebtechnopark/icon_booking.png",
-    url: "https://technopark.kmutnb.ac.th/booking/",
+    url: "https://technopark.kmutnb.ac.th/tp-booking/",
   },
   {
     id: 2,
