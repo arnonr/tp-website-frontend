@@ -1,5 +1,5 @@
 <template>
-  <ModalMemorialModal />
+  <!-- <ModalMemorialModal /> -->
   <HomeProject />
   <HomeBanner />
   <HomeNews />
