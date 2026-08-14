@@ -1801,7 +1801,7 @@ const { data: res } = await useAsyncData("team", async () => {
     let data = await $fetch(`${runtimeConfig.public.apiBase}/team`, {
         params: {
             ...search.value,
-            perPage: 100,
+            perPage: 500,
         },
     });
     return data;
@@ -1817,6 +1817,7 @@ const { data: resDepartments } = await useAsyncData(
             {
                 params: {
                     is_publish: 1,
+                    perPage: 500,
                 },
             }
         );
