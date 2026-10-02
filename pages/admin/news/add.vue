@@ -425,14 +425,20 @@ const fetchSdgs = async () => {
             is_publish: 1,
             perPage: 100,
             orderBy: "id",
+            order: "asc",
         },
     }).catch((error) => error.data);
 
-    console.log(data.data);
-
-    selectOptions.value.sdgs = data.data.map((e) => {
-        return { title: e.title_th, value: e.id };
-    });
+    selectOptions.value.sdgs = data && data.data
+        ? data.data
+              .sort((a, b) => a.id - b.id)
+              .map((e) => {
+                  return {
+                      title: `SDG ${e.id} : ${e.title_th}`,
+                      value: e.id,
+                  };
+              })
+        : [];
 };
 
 // Event

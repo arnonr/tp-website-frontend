@@ -117,8 +117,22 @@
                                                         ) in item.sdg_on_news"
                                                         :key="idx"
                                                         >{{
-                                                            sc.sdg
-                                                                .title_th + ", "
+                                                            (sc.sdg && sc.sdg.id
+                                                                ? 'SDG ' +
+                                                                  sc.sdg.id +
+                                                                  ' : '
+                                                                : '') +
+                                                            (sc.sdg
+                                                                ? sc.sdg
+                                                                      .title_th
+                                                                : '') +
+                                                            (item.sdg_on_news &&
+                                                            idx <
+                                                                item.sdg_on_news
+                                                                    .length -
+                                                                    1
+                                                                ? ', '
+                                                                : '')
                                                         }}</span
                                                     >
                                                     <hr />

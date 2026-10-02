@@ -1547,25 +1547,22 @@
                                                             </span>
                                                         </div>
                                                     </div>
-
-                                                    <!-- <div
+                                                    <!-- ผช 4 -->
+                                                    <div
                                                         class="team__item-10 col-lg-3 mt-20"
+                                                        v-if="dp.teamItems[8]"
                                                     >
                                                         <div
                                                             class="team__thumb-10 p-relative m-img"
                                                         >
-                                                            <nuxt-link
-                                                                href="/team-details"
-                                                            >
-                                                                <img
-                                                                    :src="
-                                                                        dp
-                                                                            .teamItems[4]
-                                                                            .team_file
-                                                                    "
-                                                                    alt=""
-                                                                />
-                                                            </nuxt-link>
+                                                            <img
+                                                                :src="
+                                                                    dp
+                                                                        .teamItems[8]
+                                                                        .team_file
+                                                                "
+                                                                alt=""
+                                                            />
 
                                                             <div
                                                                 class="team__contact-overlay"
@@ -1589,7 +1586,7 @@
                                                                                 stroke-linejoin="round"
                                                                             />
                                                                             <path
-                                                                                d="M28.4993 34.0732C28.4993 37.0481 27.3994 39.7981 25.5494 41.9731C23.0745 44.973 19.1495 46.8979 14.7497 46.8979L8.22482 50.7727C7.12484 51.4477 5.72487 50.5228 5.87487 49.2478L6.49985 44.323C3.14994 41.9981 1 38.2731 1 34.0732C1 29.6733 3.34995 25.7984 6.94986 23.4985C9.17481 22.0485 11.8497 21.2236 14.7497 21.2236C22.3495 21.2236 28.4993 26.9734 28.4993 34.0732Z"
+                                                                                d="M28.4993 34.0732C28.4993 37.0481 27.3994 39.7981 25.5494 41.9731C23.0745 44.973 19.1495 46.8979 14.7497 46.8979L8.22482 50.7727C7.12484 51.4477 5.72487 50.5228 5.87487 49.2478L6.49985 44.323C3.14994 41.9981 1 38.2731 1 34.0732C1 29.6733 3.34995 25.7984 6.94986 23.4994C9.17481 22.0485 11.8497 21.2236 14.7497 21.2236C22.3495 21.2236 28.4993 26.9734 28.4993 34.0732Z"
                                                                                 stroke="currentColor"
                                                                                 stroke-width="2"
                                                                                 stroke-linecap="round"
@@ -1608,9 +1605,9 @@
                                                                             class="fa fa-phone"
                                                                         ></i>
                                                                         {{
-                                                                            dp
-                                                                                .teamItems[4]
-                                                                                .phone
+                                                                            dp.teamItems[8].phone && dp.teamItems[8].phone != 'null'
+                                                                                ? dp.teamItems[8].phone
+                                                                                : ''
                                                                         }}
                                                                     </p>
                                                                     <p
@@ -1620,9 +1617,9 @@
                                                                         "
                                                                     >
                                                                         {{
-                                                                            dp
-                                                                                .teamItems[4]
-                                                                                .email
+                                                                            dp.teamItems[8].email && dp.teamItems[8].email != 'null'
+                                                                                ? dp.teamItems[8].email
+                                                                                : ''
                                                                         }}
                                                                     </p>
                                                                 </div>
@@ -1636,14 +1633,14 @@
                                                             >
                                                                 {{
                                                                     dp
-                                                                        .teamItems[4]
+                                                                        .teamItems[8]
                                                                         .prefix +
                                                                     dp
-                                                                        .teamItems[4]
+                                                                        .teamItems[8]
                                                                         .firstname +
                                                                     " " +
                                                                     dp
-                                                                        .teamItems[4]
+                                                                        .teamItems[8]
                                                                         .surname
                                                                 }}
                                                             </h3>
@@ -1652,12 +1649,18 @@
                                                             >
                                                                 {{
                                                                     dp
-                                                                        .teamItems[4]
+                                                                        .teamItems[8]
+                                                                        .position
+                                                                }}
+                                                                <br />
+                                                                {{
+                                                                    dp
+                                                                        .teamItems[8]
                                                                         .position_level
                                                                 }}
                                                             </span>
                                                         </div>
-                                                    </div> -->
+                                                    </div>
                                                 </div>
                                             </div>
 
@@ -1838,7 +1841,9 @@ onMounted(() => {
         const departmentIndex = resDepartments.value.data.findIndex(
             (el) => it.department_team_id == el.id
         );
-        departments.value[departmentIndex].teamItems.push(it);
+        if (departmentIndex !== -1) {
+            departments.value[departmentIndex].teamItems.push(it);
+        }
     }
 });
 

@@ -435,16 +435,20 @@ const fetchSdgs = async () => {
             is_publish: 1,
             perPage: 100,
             orderBy: "id",
+            order: "asc",
         },
     }).catch((error) => error.data);
 
-
-    selectOptions.value.sdgs = data.data.map((e) => {
-        return { title: e.title_th, value: e.id };
-    });
-    console.log(selectOptions.value.sdgs);
-
-
+    selectOptions.value.sdgs = data && data.data
+        ? data.data
+              .sort((a, b) => a.id - b.id)
+              .map((e) => {
+                  return {
+                      title: `SDG ${e.id} : ${e.title_th}`,
+                      value: e.id,
+                  };
+              })
+        : [];
 };
 
 const { data: res } = await useFetch(`${apiBase}/news/${route.params.id}`, {
@@ -470,10 +474,16 @@ let test = res.value.data.service_categories.map((x) => {
 });
 item.value.service_category_id = test;
 
-let test2 = res.value.data.sdg_on_news.map((x) => {
-    return { value: x.sdg.id, title: x.sdg.title_th };
-});
-console.log(test2);
+let test2 = res.value.data.sdg_on_news
+    ? res.value.data.sdg_on_news
+          .filter((x) => x && x.sdg)
+          .map((x) => {
+              return {
+                  value: x.sdg.id,
+                  title: `SDG ${x.sdg.id} : ${x.sdg.title_th}`,
+              };
+          })
+    : [];
 item.value.sdg_id = test2;
 
 initFroala();
